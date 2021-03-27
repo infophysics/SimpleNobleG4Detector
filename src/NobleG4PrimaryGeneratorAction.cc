@@ -1,4 +1,4 @@
-#include "LArPrimaryGeneratorAction.hh"
+#include "NobleG4PrimaryGeneratorAction.hh"
 
 #include "G4LogicalVolumeStore.hh"
 #include "G4LogicalVolume.hh"
@@ -10,10 +10,10 @@
 #include "G4SystemOfUnits.hh"
 #include "Randomize.hh"
 
-LArPrimaryGeneratorAction::LArPrimaryGeneratorAction()
+NobleG4PrimaryGeneratorAction::NobleG4PrimaryGeneratorAction()
 : G4VUserPrimaryGeneratorAction(),
   fParticleGun(0), 
-  fLArBox(0)
+  fNobleG4Box(0)
 {
   G4int NParticle = 1;
   fParticleGun  = new G4ParticleGun(NParticle);
@@ -28,12 +28,12 @@ LArPrimaryGeneratorAction::LArPrimaryGeneratorAction()
   fParticleGun->SetParticleEnergy(100.*MeV);
 }
 
-LArPrimaryGeneratorAction::~LArPrimaryGeneratorAction()
+NobleG4PrimaryGeneratorAction::~NobleG4PrimaryGeneratorAction()
 {
   delete fParticleGun;
 }
 
-void LArPrimaryGeneratorAction::GeneratePrimaries(G4Event* GenEvent)
+void NobleG4PrimaryGeneratorAction::GeneratePrimaries(G4Event* GenEvent)
 {
   // This function is called at the begining of each event.
   
@@ -41,24 +41,24 @@ void LArPrimaryGeneratorAction::GeneratePrimaries(G4Event* GenEvent)
   G4double CubeY = 0;
   G4double CubeZ = 0;
 
-  if (!fLArBox)
+  if (!fNobleG4Box)
   {
-    G4LogicalVolume* LArLV
+    G4LogicalVolume* NobleG4LV
       = G4LogicalVolumeStore::GetInstance()->GetVolume("World");
-    if ( LArLV ) fLArBox = dynamic_cast<G4Box*>(LArLV->GetSolid());
+    if ( NobleG4LV ) fNobleG4Box = dynamic_cast<G4Box*>(NobleG4LV->GetSolid());
   }
 
-  if ( fLArBox ) {
-    CubeX = fLArBox->GetXHalfLength()*2.;
-    CubeY = fLArBox->GetYHalfLength()*2.;
-    CubeZ = fLArBox->GetZHalfLength()*2.;
+  if ( fNobleG4Box ) {
+    CubeX = fNobleG4Box->GetXHalfLength()*2.;
+    CubeY = fNobleG4Box->GetYHalfLength()*2.;
+    CubeZ = fNobleG4Box->GetZHalfLength()*2.;
   }  
   else  {
     G4ExceptionDescription msg;
     msg << "World volume of box shape not found.\n"; 
     msg << "Perhaps you have changed geometry.\n";
     msg << "The gun will be place at the center.";
-    G4Exception("LArPrimaryGeneratorAction::GeneratePrimaries()",
+    G4Exception("NobleG4PrimaryGeneratorAction::GeneratePrimaries()",
      "MyCode0002",JustWarning,msg);
   }
 

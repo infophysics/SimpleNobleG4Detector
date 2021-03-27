@@ -1,5 +1,5 @@
-#ifndef LArPrimaryGeneratorAction_h
-#define LArPrimaryGeneratorAction_h 1
+#ifndef NobleG4PrimaryGeneratorAction_h
+#define NobleG4PrimaryGeneratorAction_h 1
 
 #include "G4VUserPrimaryGeneratorAction.hh"
 #include "G4ParticleGun.hh"
@@ -14,11 +14,11 @@ class G4Box;
 /// The default kinematic is a 1 MeV electron, randomly distribued 
 /// in front of the phantom across 80% of the (X,Y) phantom size.
 
-class LArPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
+class NobleG4PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
   public:
-    LArPrimaryGeneratorAction();    
-    virtual ~LArPrimaryGeneratorAction();
+    NobleG4PrimaryGeneratorAction();    
+    virtual ~NobleG4PrimaryGeneratorAction();
 
     // method from the base class
     virtual void GeneratePrimaries(G4Event*);         
@@ -28,7 +28,7 @@ class LArPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
   
   private:
     G4ParticleGun*  fParticleGun; // pointer to G4 gun class
-    G4Box* fLArBox;
+    G4Box* fNobleG4Box;
 };
 
 #endif

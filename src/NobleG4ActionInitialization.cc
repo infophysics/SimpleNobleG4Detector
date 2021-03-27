@@ -1,31 +1,31 @@
-#include "LArActionInitialization.hh"
-#include "LArPrimaryGeneratorAction.hh"
-#include "LArRunAction.hh"
-#include "LArEventAction.hh"
-#include "LArSteppingAction.hh"
+#include "NobleG4ActionInitialization.hh"
+#include "NobleG4PrimaryGeneratorAction.hh"
+#include "NobleG4RunAction.hh"
+#include "NobleG4EventAction.hh"
+#include "NobleG4SteppingAction.hh"
 
-LArActionInitialization::LArActionInitialization()
+NobleG4ActionInitialization::NobleG4ActionInitialization()
  : G4VUserActionInitialization()
 {}
 
-LArActionInitialization::~LArActionInitialization()
+NobleG4ActionInitialization::~NobleG4ActionInitialization()
 {}
 
-void LArActionInitialization::BuildForMaster() const
+void NobleG4ActionInitialization::BuildForMaster() const
 {
-  LArRunAction* RunAction = new LArRunAction;
+  NobleG4RunAction* RunAction = new NobleG4RunAction;
   SetUserAction(RunAction);
 }
 
-void LArActionInitialization::Build() const
+void NobleG4ActionInitialization::Build() const
 {
-  SetUserAction(new LArPrimaryGeneratorAction);
+  SetUserAction(new NobleG4PrimaryGeneratorAction);
 
-  LArRunAction* RunAction = new LArRunAction;
+  NobleG4RunAction* RunAction = new NobleG4RunAction;
   SetUserAction(RunAction);
   
-  LArEventAction* EventAction = new LArEventAction(RunAction);
+  NobleG4EventAction* EventAction = new NobleG4EventAction(RunAction);
   SetUserAction(EventAction);
   
-  SetUserAction(new LArSteppingAction(EventAction));
+  SetUserAction(new NobleG4SteppingAction(EventAction));
 }

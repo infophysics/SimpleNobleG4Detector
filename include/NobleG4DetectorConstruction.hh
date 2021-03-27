@@ -1,5 +1,5 @@
-#ifndef LArDetectorConstruction_h
-#define LArDetectorConstruction_h 1
+#ifndef NobleG4DetectorConstruction_h
+#define NobleG4DetectorConstruction_h 1
 
 #include "G4VUserDetectorConstruction.hh"
 #include "globals.hh"
@@ -9,11 +9,11 @@ class G4LogicalVolume;
 
 // Detector construction class to define materials and geometry.
 
-class LArDetectorConstruction : public G4VUserDetectorConstruction
+class NobleG4DetectorConstruction : public G4VUserDetectorConstruction
 {
   public:
-    LArDetectorConstruction();
-    virtual ~LArDetectorConstruction();
+    NobleG4DetectorConstruction();
+    virtual ~NobleG4DetectorConstruction();
 
     virtual G4VPhysicalVolume* Construct();
 

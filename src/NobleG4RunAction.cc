@@ -1,6 +1,6 @@
-#include "LArRunAction.hh"
-#include "LArPrimaryGeneratorAction.hh"
-#include "LArDetectorConstruction.hh"
+#include "NobleG4RunAction.hh"
+#include "NobleG4PrimaryGeneratorAction.hh"
+#include "NobleG4DetectorConstruction.hh"
 
 #include "G4RunManager.hh"
 #include "G4Run.hh"
@@ -12,7 +12,7 @@
 
 #include "g4root.hh"
 
-LArRunAction::LArRunAction()
+NobleG4RunAction::NobleG4RunAction()
 : G4UserRunAction(),
   fEdep(0.),
   fEdep2(0.)
@@ -27,17 +27,17 @@ LArRunAction::LArRunAction()
 
   AnalysisManager->SetVerboseLevel(1);
   AnalysisManager->SetNtupleMerging(true);
-  AnalysisManager->CreateH1("dE","dE in LAr", 50, 0., 10*MeV);
-  AnalysisManager->CreateH1("dx","dx in LAr", 50, 0., 10*cm);
-  AnalysisManager->CreateH1("dEdx","dE/dx in LAr", 50, 0., 50*MeV/cm);
+  AnalysisManager->CreateH1("dE","dE in NobleG4", 50, 0., 10*MeV);
+  AnalysisManager->CreateH1("dx","dx in NobleG4", 50, 0., 10*cm);
+  AnalysisManager->CreateH1("dEdx","dE/dx in NobleG4", 50, 0., 50*MeV/cm);
 }
 
-LArRunAction::~LArRunAction()
+NobleG4RunAction::~NobleG4RunAction()
 {
   delete G4AnalysisManager::Instance();
 }
 
-void LArRunAction::BeginOfRunAction(const G4Run*)
+void NobleG4RunAction::BeginOfRunAction(const G4Run*)
 { 
   // Inform the RunManager to save random number seed.
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
@@ -51,7 +51,7 @@ void LArRunAction::BeginOfRunAction(const G4Run*)
   AnalysisManager->OpenFile(FileName);
 }
 
-void LArRunAction::EndOfRunAction(const G4Run* Run)
+void NobleG4RunAction::EndOfRunAction(const G4Run* Run)
 {
   G4int NEvents = Run->GetNumberOfEvent();
   if (NEvents == 0) return;
@@ -70,8 +70,8 @@ void LArRunAction::EndOfRunAction(const G4Run* Run)
   // Run conditions
   //  note: There is no primary generator action object for "master"
   //        run manager for multi-threaded mode.
-  const LArPrimaryGeneratorAction* GeneratorAction
-   = static_cast<const LArPrimaryGeneratorAction*>
+  const NobleG4PrimaryGeneratorAction* GeneratorAction
+   = static_cast<const NobleG4PrimaryGeneratorAction*>
      (G4RunManager::GetRunManager()->GetUserPrimaryGeneratorAction());
   G4String RunCondition;
   if (GeneratorAction)
@@ -111,13 +111,13 @@ void LArRunAction::EndOfRunAction(const G4Run* Run)
   AnalysisManager->CloseFile();
 }
 
-void LArRunAction::AddEdep(G4double edep)
+void NobleG4RunAction::AddEdep(G4double edep)
 {
   fEdep  += edep;
   fEdep2 += edep*edep;
 }
 
-void LArRunAction::FilldEdx(G4double dE, G4double dx)
+void NobleG4RunAction::FilldEdx(G4double dE, G4double dx)
 {
   auto AnalysisManager = G4AnalysisManager::Instance();
   AnalysisManager->FillH1(0, dE);

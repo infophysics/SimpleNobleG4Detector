@@ -1,6 +1,6 @@
-#include "LArSteppingAction.hh"
-#include "LArEventAction.hh"
-#include "LArDetectorConstruction.hh"
+#include "NobleG4SteppingAction.hh"
+#include "NobleG4EventAction.hh"
+#include "NobleG4DetectorConstruction.hh"
 
 #include "G4Step.hh"
 #include "G4Event.hh"
@@ -9,21 +9,21 @@
 
 #include "g4root.hh"
 
-LArSteppingAction::LArSteppingAction(LArEventAction* EventAction)
+NobleG4SteppingAction::NobleG4SteppingAction(NobleG4EventAction* EventAction)
 : G4UserSteppingAction(),
   fEventAction(EventAction),
   fSensitiveVolume(0)
 {}
 
-LArSteppingAction::~LArSteppingAction()
+NobleG4SteppingAction::~NobleG4SteppingAction()
 {}
 
 
-void LArSteppingAction::UserSteppingAction(const G4Step* Step)
+void NobleG4SteppingAction::UserSteppingAction(const G4Step* Step)
 {
   if (!fSensitiveVolume) { 
-    const LArDetectorConstruction* DetectorConstruction
-      = static_cast<const LArDetectorConstruction*>
+    const NobleG4DetectorConstruction* DetectorConstruction
+      = static_cast<const NobleG4DetectorConstruction*>
         (G4RunManager::GetRunManager()->GetUserDetectorConstruction());
     fSensitiveVolume = DetectorConstruction->GetSensitiveVolume();   
   }

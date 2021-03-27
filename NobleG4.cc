@@ -1,5 +1,5 @@
-#include "LArDetectorConstruction.hh"
-#include "LArActionInitialization.hh"
+#include "NobleG4DetectorConstruction.hh"
+#include "NobleG4ActionInitialization.hh"
 
 #include "G4RunManagerFactory.hh"
 
@@ -26,7 +26,7 @@ int main(int argc,char** argv)
   // Set mandatory initialization classes.
 
   // Detector construction.
-  RunManager->SetUserInitialization(new LArDetectorConstruction());
+  RunManager->SetUserInitialization(new NobleG4DetectorConstruction());
 
   // Set the physics list.
   G4VModularPhysicsList* PhysicsList = new FTFP_BERT;
@@ -34,7 +34,7 @@ int main(int argc,char** argv)
   RunManager->SetUserInitialization(PhysicsList);
     
   // User action initialization.
-  RunManager->SetUserInitialization(new LArActionInitialization());
+  RunManager->SetUserInitialization(new NobleG4ActionInitialization());
   
   // Initialize the visualization.
   G4VisManager* VisManager = new G4VisExecutive;

@@ -1,4 +1,4 @@
-#include "LArDetectorConstruction.hh"
+#include "NobleG4DetectorConstruction.hh"
 
 #include "G4RunManager.hh"
 #include "G4NistManager.hh"
@@ -12,17 +12,17 @@
 #include "G4SystemOfUnits.hh"
 
 
-LArDetectorConstruction::LArDetectorConstruction()
+NobleG4DetectorConstruction::NobleG4DetectorConstruction()
 : G4VUserDetectorConstruction(),
   fSensitiveVolume(0)
 { }
 
 
-LArDetectorConstruction::~LArDetectorConstruction()
+NobleG4DetectorConstruction::~NobleG4DetectorConstruction()
 { }
 
 
-G4VPhysicalVolume* LArDetectorConstruction::Construct()
+G4VPhysicalVolume* NobleG4DetectorConstruction::Construct()
 {
   // Get NIST material manager.
   G4NistManager* NIST = G4NistManager::Instance();

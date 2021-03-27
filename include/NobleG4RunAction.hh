@@ -1,5 +1,5 @@
-#ifndef LArRunAction_h
-#define LArRunAction_h 1
+#ifndef NobleG4RunAction_h
+#define NobleG4RunAction_h 1
 
 #include "G4UserRunAction.hh"
 #include "G4Accumulable.hh"
@@ -13,11 +13,11 @@ class G4Run;
 /// from the energy deposit accumulated via stepping and event actions.
 /// The computed dose is then printed on the screen.
 
-class LArRunAction : public G4UserRunAction
+class NobleG4RunAction : public G4UserRunAction
 {
   public:
-    LArRunAction();
-    virtual ~LArRunAction();
+    NobleG4RunAction();
+    virtual ~NobleG4RunAction();
 
     // virtual G4Run* GenerateRun();
     virtual void BeginOfRunAction(const G4Run*);

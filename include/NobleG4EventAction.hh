@@ -1,18 +1,18 @@
-#ifndef LArEventAction_h
-#define LArEventAction_h 1
+#ifndef NobleG4EventAction_h
+#define NobleG4EventAction_h 1
 
 #include "G4UserEventAction.hh"
 #include "globals.hh"
 
-class LArRunAction;
+class NobleG4RunAction;
 
 /// Event action class.
 
-class LArEventAction : public G4UserEventAction
+class NobleG4EventAction : public G4UserEventAction
 {
   public:
-    LArEventAction(LArRunAction* runAction);
-    virtual ~LArEventAction();
+    NobleG4EventAction(NobleG4RunAction* runAction);
+    virtual ~NobleG4EventAction();
 
     virtual void BeginOfEventAction(const G4Event* event);
     virtual void EndOfEventAction(const G4Event* event);
@@ -20,7 +20,7 @@ class LArEventAction : public G4UserEventAction
     void AddEdep(G4double edep) { fEdep += edep; }
 
   private:
-    LArRunAction* fRunAction;
+    NobleG4RunAction* fRunAction;
     G4double     fEdep;
 };
 
