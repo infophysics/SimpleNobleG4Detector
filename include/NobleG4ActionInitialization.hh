@@ -3,7 +3,7 @@
 
 #include "G4VUserActionInitialization.hh"
 
-/// Action initialization class.
+// Action initialization class.
 
 class NobleG4ActionInitialization : public G4VUserActionInitialization
 {

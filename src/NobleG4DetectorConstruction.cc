@@ -14,7 +14,7 @@
 
 NobleG4DetectorConstruction::NobleG4DetectorConstruction()
 : G4VUserDetectorConstruction(),
-  fSensitiveVolume(0)
+  fActiveVolume(0)
 { }
 
 
@@ -53,7 +53,7 @@ G4VPhysicalVolume* NobleG4DetectorConstruction::Construct()
 						      false);          // No overlap checking.
 
   // Set the sensitive volume.
-  fSensitiveVolume = LogicalWorld;
+  fActiveVolume = LogicalWorld;
   
   return PhysicalWorld;
 }

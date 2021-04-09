@@ -6,22 +6,27 @@
 
 class NobleG4RunAction;
 
-/// Event action class.
+// Event action class.
 
 class NobleG4EventAction : public G4UserEventAction
 {
   public:
-    NobleG4EventAction(NobleG4RunAction* runAction);
+    NobleG4EventAction(NobleG4RunAction* RunAction);
     virtual ~NobleG4EventAction();
 
-    virtual void BeginOfEventAction(const G4Event* event);
-    virtual void EndOfEventAction(const G4Event* event);
+    virtual void BeginOfEventAction(const G4Event* Event);
+    virtual void EndOfEventAction(const G4Event* Event);
 
-    void AddEdep(G4double edep) { fEdep += edep; }
-
+    void AddEnergy(G4double Energy) { fEnergy += Energy; }
+    void AddElectrons(G4double Electrons) { fElectrons += Electrons; }
+    void AddPhotons(G4double Photons) { fPhotons += Photons; }
+    G4bool GetTupleState();
+  
   private:
     NobleG4RunAction* fRunAction;
-    G4double     fEdep;
+    G4double fEnergy;
+    G4double fElectrons;
+    G4double fPhotons;
 };
 
 #endif

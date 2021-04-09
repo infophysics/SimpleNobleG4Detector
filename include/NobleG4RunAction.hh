@@ -3,15 +3,15 @@
 
 #include "G4UserRunAction.hh"
 #include "G4Accumulable.hh"
+#include "G4GenericMessenger.hh"
 #include "globals.hh"
 
 class G4Run;
 
-/// Run action class
-///
-/// In EndOfRunAction(), it calculates the dose in the selected volume 
-/// from the energy deposit accumulated via stepping and event actions.
-/// The computed dose is then printed on the screen.
+// The Run Action class.
+// In EndOfRunAction(), the total energy deposited
+// in the active volume during the run is calculated
+// and printed to the screen.
 
 class NobleG4RunAction : public G4UserRunAction
 {
@@ -19,16 +19,21 @@ class NobleG4RunAction : public G4UserRunAction
     NobleG4RunAction();
     virtual ~NobleG4RunAction();
 
-    // virtual G4Run* GenerateRun();
     virtual void BeginOfRunAction(const G4Run*);
     virtual void EndOfRunAction(const G4Run*);
 
-    void AddEdep (G4double edep);
-    void FilldEdx(G4double dE, G4double dx);
+    void AddEnergy(G4double Energy);
+    void AddElectrons(G4double Electrons);
+    void AddPhotons(G4double Photons);
+    G4bool GetTupleState() { return fEventLevelTuple; }
+    void SetTupleState(G4String Val);
 
   private:
-    G4Accumulable<G4double> fEdep;
-    G4Accumulable<G4double> fEdep2;
+    G4Accumulable<G4double> fEnergy;
+    G4Accumulable<G4double> fElectrons;
+    G4Accumulable<G4double> fPhotons;
+    G4GenericMessenger* fMessenger;
+    G4bool fEventLevelTuple;
 };
 
 #endif

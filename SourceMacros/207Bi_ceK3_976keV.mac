@@ -1,0 +1,11 @@
+# Macro file for NobleG4.
+
+# Set the output file name.
+/analysis/setFileName 207Bi_ceK3_976keV
+
+# Set the impinging particle type and energy.
+/gun/particle e-
+/gun/energy 0.9757 MeV
+
+# Start the run.
+/run/beamOn {NEvents}

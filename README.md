@@ -15,3 +15,11 @@ cd /path/to/G4-build
 cmake -DGEANT4_USE_OPENGL_X11=ON .
 
 Be advised that this requires both OpenGL and X11. Though typically installed on most devices, be advised that these dependencies might not be met.
+
+To build and install the G4 SimpleNobleG4 code:
+
+cd path/to/SimpleNobleG4Detector
+mkdir build
+cd build
+cmake -DGEANT4_DIR=path/to/Geant4/installation/lib/Geant4[version]/ /path/to/SimpleNobleG4Detector
+make install

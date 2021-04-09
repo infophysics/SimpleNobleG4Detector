@@ -1,0 +1,404 @@
+# Macro file for NobleG4.
+#
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+
+#/cuts/setLowEdge 500 eV
+
+# Initialize kernel.
+/run/initialize
+
+# Set the verbosity.
+/control/verbose 1
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+
+# Set the impinging particle type and energy.
+/gun/particle e-
+/gun/energy 1 MeV
+
+# Run 0
+/run/setCut 1e-06 mm
+/run/beamOn 1000
+# Run 1
+/run/setCut 1.1353195339077614e-06 mm
+/run/beamOn 1000
+# Run 2
+/run/setCut 1.2889504440725364e-06 mm
+/run/beamOn 1000
+# Run 3
+/run/setCut 1.4633706173946342e-06 mm
+/run/beamOn 1000
+# Run 4
+/run/setCut 1.661393247274789e-06 mm
+/run/beamOn 1000
+# Run 5
+/run/setCut 1.8862122071335192e-06 mm
+/run/beamOn 1000
+# Run 6
+/run/setCut 2.141453563853957e-06 mm
+/run/beamOn 1000
+# Run 7
+/run/setCut 2.431234061999789e-06 mm
+/run/beamOn 1000
+# Run 8
+/run/setCut 2.7602275220902738e-06 mm
+/run/beamOn 1000
+# Run 9
+/run/setCut 3.1337402238589046e-06 mm
+/run/beamOn 1000
+# Run 10
+/run/setCut 3.5577964903394953e-06 mm
+/run/beamOn 1000
+# Run 11
+/run/setCut 4.039235853150905e-06 mm
+/run/beamOn 1000
+# Run 12
+/run/setCut 4.585823366142804e-06 mm
+/run/beamOn 1000
+# Run 13
+/run/setCut 5.2063748466325696e-06 mm
+/run/beamOn 1000
+# Run 14
+/run/setCut 5.910899064227994e-06 mm
+/run/beamOn 1000
+# Run 15
+/run/setCut 6.710759170575148e-06 mm
+/run/beamOn 1000
+# Run 16
+/run/setCut 7.618855973704612e-06 mm
+/run/beamOn 1000
+# Run 17
+/run/setCut 8.649836012976684e-06 mm
+/run/beamOn 1000
+# Run 18
+/run/setCut 9.820327790631256e-06 mm
+/run/beamOn 1000
+# Run 19
+/run/setCut 1.1149209970080915e-05 mm
+/run/beamOn 1000
+# Run 20
+/run/setCut 1.265791586667203e-05 mm
+/run/beamOn 1000
+# Run 21
+/run/setCut 1.4370779141993746e-05 mm
+/run/beamOn 1000
+# Run 22
+/run/setCut 1.631542627737972e-05 mm
+/run/beamOn 1000
+# Run 23
+/run/setCut 1.8523222156741183e-05 mm
+/run/beamOn 1000
+# Run 24
+/run/setCut 2.1029775945461318e-05 mm
+/run/beamOn 1000
+# Run 25
+/run/setCut 2.3875515424585842e-05 mm
+/run/beamOn 1000
+# Run 26
+/run/setCut 2.710633904364837e-05 mm
+/run/beamOn 1000
+# Run 27
+/run/setCut 3.077435620898062e-05 mm
+/run/beamOn 1000
+# Run 28
+/run/setCut 3.4938727747491294e-05 mm
+/run/beamOn 1000
+# Run 29
+/run/setCut 3.966662010161199e-05 mm
+/run/beamOn 1000
+# Run 30
+/run/setCut 4.503428864545836e-05 mm
+/run/beamOn 1000
+# Run 31
+/run/setCut 5.112830759482948e-05 mm
+/run/beamOn 1000
+# Run 32
+/run/setCut 5.804696634805445e-05 mm
+/run/beamOn 1000
+# Run 33
+/run/setCut 6.590185477903269e-05 mm
+/run/beamOn 1000
+# Run 34
+/run/setCut 7.481966305138837e-05 mm
+/run/beamOn 1000
+# Run 35
+/run/setCut 8.4944224982638e-05 mm
+/run/beamOn 1000
+# Run 36
+/run/setCut 9.643883791544459e-05 mm
+/run/beamOn 1000
+# Run 37
+/run/setCut 0.00010948889651276869 mm
+/run/beamOn 1000
+# Run 38
+/run/setCut 0.00012430488295695166 mm
+/run/beamOn 1000
+# Run 39
+/run/setCut 0.00014112576178114535 mm
+/run/beamOn 1000
+# Run 40
+/run/setCut 0.0001602228340877477 mm
+/run/beamOn 1000
+# Run 41
+/run/setCut 0.00018190411331788227 mm
+/run/beamOn 1000
+# Run 42
+/run/setCut 0.00020651929314796272 mm
+/run/beamOn 1000
+# Run 43
+/run/setCut 0.00023446538763970535 mm
+/run/beamOn 1000
+# Run 44
+/run/setCut 0.0002661931346126132 mm
+/run/beamOn 1000
+# Run 45
+/run/setCut 0.00030221426551783794 mm
+/run/beamOn 1000
+# Run 46
+/run/setCut 0.0003431097590679882 mm
+/run/beamOn 1000
+# Run 47
+/run/setCut 0.00038953921174427267 mm
+/run/beamOn 1000
+# Run 48
+/run/setCut 0.0004422514763163044 mm
+/run/beamOn 1000
+# Run 49
+/run/setCut 0.0005020967399614466 mm
+/run/beamOn 1000
+# Run 50
+/run/setCut 0.0005700402367896359 mm
+/run/beamOn 1000
+# Run 51
+/run/setCut 0.0006471778159406795 mm
+/run/beamOn 1000
+# Run 52
+/run/setCut 0.0007347536163492151 mm
+/run/beamOn 1000
+# Run 53
+/run/setCut 0.0008341801332506338 mm
+/run/beamOn 1000
+# Run 54
+/run/setCut 0.0009470610000772239 mm
+/run/beamOn 1000
+# Run 55
+/run/setCut 0.0010752168531898921 mm
+/run/beamOn 1000
+# Run 56
+/run/setCut 0.0012207146966133182 mm
+/run/beamOn 1000
+# Run 57
+/run/setCut 0.0013859012403933868 mm
+/run/beamOn 1000
+# Run 58
+/run/setCut 0.0015734407502856099 mm
+/run/beamOn 1000
+# Run 59
+/run/setCut 0.0017863580192457368 mm
+/run/beamOn 1000
+# Run 60
+/run/setCut 0.0020280871538024617 mm
+/run/beamOn 1000
+# Run 61
+/run/setCut 0.002302526962179329 mm
+/run/beamOn 1000
+# Run 62
+/run/setCut 0.002614103837511492 mm
+/run/beamOn 1000
+# Run 63
+/run/setCut 0.0029678431503900376 mm
+/run/beamOn 1000
+# Run 64
+/run/setCut 0.0033694503022121598 mm
+/run/beamOn 1000
+# Run 65
+/run/setCut 0.0038254027466328748 mm
+/run/beamOn 1000
+# Run 66
+/run/setCut 0.004343054463316705 mm
+/run/beamOn 1000
+# Run 67
+/run/setCut 0.004930754569028749 mm
+/run/beamOn 1000
+# Run 68
+/run/setCut 0.005597981979123284 mm
+/run/beamOn 1000
+# Run 69
+/run/setCut 0.006355498291362295 mm
+/run/beamOn 1000
+# Run 70
+/run/setCut 0.007215521357901014 mm
+/run/beamOn 1000
+# Run 71
+/run/setCut 0.008191922344953684 mm
+/run/beamOn 1000
+# Run 72
+/run/setCut 0.009300449458481392 mm
+/run/beamOn 1000
+# Run 73
+/run/setCut 0.010558981944335787 mm
+/run/beamOn 1000
+# Run 74
+/run/setCut 0.011987818459583773 mm
+/run/beamOn 1000
+# Run 75
+/run/setCut 0.013610004466105507 mm
+/run/beamOn 1000
+# Run 76
+/run/setCut 0.015451703926941455 mm
+/run/beamOn 1000
+# Run 77
+/run/setCut 0.0175426213004159 mm
+/run/beamOn 1000
+# Run 78
+/run/setCut 0.019916480638308583 mm
+/run/beamOn 1000
+# Run 79
+/run/setCut 0.022611569515367455 mm
+/run/beamOn 1000
+# Run 80
+/run/setCut 0.025671356563109923 mm
+/run/beamOn 1000
+# Run 81
+/run/setCut 0.029145192568009907 mm
+/run/beamOn 1000
+# Run 82
+/run/setCut 0.03308910644196496 mm
+/run/beamOn 1000
+# Run 83
+/run/setCut 0.03756670890311596 mm
+/run/beamOn 1000
+# Run 84
+/run/setCut 0.04265021844233416 mm
+/run/beamOn 1000
+# Run 85
+/run/setCut 0.048421626123015024 mm
+/run/beamOn 1000
+# Run 86
+/run/setCut 0.0549740180010373 mm
+/run/beamOn 1000
+# Run 87
+/run/setCut 0.06241307649397468 mm
+/run/beamOn 1000
+# Run 88
+/run/setCut 0.07085878491488878 mm
+/run/beamOn 1000
+# Run 89
+/run/setCut 0.08044736266284185 mm
+/run/beamOn 1000
+# Run 90
+/run/setCut 0.09133346228248625 mm
+/run/beamOn 1000
+# Run 91
+/run/setCut 0.10369266382873439 mm
+/run/beamOn 1000
+# Run 92
+/run/setCut 0.11772430676769291 mm
+/run/beamOn 1000
+# Run 93
+/run/setCut 0.13365470508911143 mm
+/run/beamOn 1000
+# Run 94
+/run/setCut 0.15174079748634928 mm
+/run/beamOn 1000
+# Run 95
+/run/setCut 0.17227429147699408 mm
+/run/beamOn 1000
+# Run 96
+/run/setCut 0.19558636830395074 mm
+/run/beamOn 1000
+# Run 97
+/run/setCut 0.22205302450155356 mm
+/run/beamOn 1000
+# Run 98
+/run/setCut 0.2521011362799125 mm
+/run/beamOn 1000
+# Run 99
+/run/setCut 0.2862153445389273 mm
+/run/beamOn 1000
+# Run 100
+/run/setCut 0.32494587155918425 mm
+/run/beamOn 1000
+# Run 101
+/run/setCut 0.36891739544382435 mm
+/run/beamOn 1000
+# Run 102
+/run/setCut 0.4188391254457479 mm
+/run/beamOn 1000
+# Run 103
+/run/setCut 0.4755162406834009 mm
+/run/beamOn 1000
+# Run 104
+/run/setCut 0.5398628767382496 mm
+/run/beamOn 1000
+# Run 105
+/run/setCut 0.6129168695925727 mm
+/run/beamOn 1000
+# Run 106
+/run/setCut 0.6958564947100453 mm
+/run/beamOn 1000
+# Run 107
+/run/setCut 0.7900194712408972 mm
+/run/beamOn 1000
+# Run 108
+/run/setCut 0.8969245378672714 mm
+/run/beamOn 1000
+# Run 109
+/run/setCut 1.018295948281905 mm
+/run/beamOn 1000
+# Run 110
+/run/setCut 1.1560912813835742 mm
+/run/beamOn 1000
+# Run 111
+/run/setCut 1.3125330147352259 mm
+/run/beamOn 1000
+# Run 112
+/run/setCut 1.4901443705277455 mm
+/run/beamOn 1000
+# Run 113
+/run/setCut 1.6917900122028344 mm
+/run/beamOn 1000
+# Run 114
+/run/setCut 1.9207222481239279 mm
+/run/beamOn 1000
+# Run 115
+/run/setCut 2.18063348750633 mm
+/run/beamOn 1000
+# Run 116
+/run/setCut 2.4757157946593424 mm
+/run/beamOn 1000
+# Run 117
+/run/setCut 2.8107285020807278 mm
+/run/beamOn 1000
+# Run 118
+/run/setCut 3.191074972923552 mm
+/run/beamOn 1000
+# Run 119
+/run/setCut 3.622889750924289 mm
+/run/beamOn 1000
+# Run 120
+/run/setCut 4.11313750341857 mm
+/run/beamOn 1000
+# Run 121
+/run/setCut 4.669725353279704 mm
+/run/beamOn 1000
+# Run 122
+/run/setCut 5.30163041156277 mm
+/run/beamOn 1000
+# Run 123
+/run/setCut 6.019044567806657 mm
+/run/beamOn 1000
+# Run 124
+/run/setCut 6.83353887329231 mm
+/run/beamOn 1000
+# Run 125
+/run/setCut 7.758250168566794 mm
+/run/beamOn 1000
+# Run 126
+/run/setCut 8.808092965317064 mm
+/run/beamOn 1000
+# Run 127
+/run/setCut 10.0 mm
+/run/beamOn 1000

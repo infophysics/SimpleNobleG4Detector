@@ -17,10 +17,10 @@ class NobleG4DetectorConstruction : public G4VUserDetectorConstruction
 
     virtual G4VPhysicalVolume* Construct();
 
-    G4LogicalVolume* GetSensitiveVolume() const { return fSensitiveVolume; }
+    G4LogicalVolume* GetActiveVolume() const { return fActiveVolume; }
 
   protected:
-    G4LogicalVolume*  fSensitiveVolume;
+    G4LogicalVolume*  fActiveVolume;
 };
 
 #endif

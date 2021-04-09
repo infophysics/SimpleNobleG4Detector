@@ -21,7 +21,7 @@ class NobleG4SteppingAction : public G4UserSteppingAction
 
   private:
     NobleG4EventAction* fEventAction;
-    G4LogicalVolume* fSensitiveVolume;
+    G4LogicalVolume* fActiveVolume;
 };
 
 #endif

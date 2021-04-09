@@ -1,0 +1,11 @@
+# Macro file for NobleG4.
+
+# Set the output file name.
+/analysis/setFileName 7Li_compton_305keV
+
+# Set the impinging particle type and energy.
+/gun/particle e-
+/gun/energy 0.3049 MeV
+
+# Start the run.
+/run/beamOn {NEvents}

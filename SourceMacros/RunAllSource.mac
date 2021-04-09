@@ -1,0 +1,37 @@
+# Initialize kernel.
+/run/initialize
+
+# Analysis settings.
+/NobleG4/tuple/event false
+
+# Set the verbosity.
+/control/verbose 1
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+
+# Set the secondary production cuts.
+/run/setCut 0.001 mm
+
+# Set the number of events to be generated.
+/control/alias NEvents 10000
+
+/control/execute 113Sn_ceK2_364keV.mac
+/control/execute 133Ba_gamma_356keV.mac
+/control/execute 133Ba_gamma_81keV.mac
+/control/execute 137Cs_gamma_662keV.mac
+/control/execute 207Bi_ceK3_976keV.mac
+/control/execute 22Na_gamma_1275keV.mac
+/control/execute 22Na_gamma_511keV.mac
+/control/execute 241Am_gamma_59keV.mac
+/control/execute 57Co_gamma_122keV.mac
+/control/execute 60Co_gamma_1173keV.mac
+/control/execute 60Co_gamma_1333keV.mac
+/control/execute 7Li_compton_110keV.mac
+/control/execute 7Li_compton_175keV.mac
+/control/execute 7Li_compton_232keV.mac
+/control/execute 7Li_compton_283keV.mac
+/control/execute 7Li_compton_305keV.mac
+/control/execute 7Li_compton_42keV.mac
+/control/execute 7Li_compton_76keV.mac
+/control/execute 7Li_compton_86keV.mac

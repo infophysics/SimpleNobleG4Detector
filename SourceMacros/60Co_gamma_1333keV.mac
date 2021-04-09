@@ -1,0 +1,11 @@
+# Macro file for NobleG4.
+
+# Set the output file name.
+/analysis/setFileName 60Co_gamma_1333keV
+
+# Set the impinging particle type and energy.
+/gun/particle gamma
+/gun/energy 1.3325 MeV
+
+# Start the run.
+/run/beamOn {NEvents}
