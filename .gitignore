@@ -1,3 +1,5 @@
 *~
+*.png
+*.root
 *build/
 *SourceMacros/G4Output/

@@ -26,18 +26,9 @@ NobleG4RunAction::NobleG4RunAction()
 				      "/NobleG4/tuple/",
 				      "Control of n-tuple quantities");
 
-  // Now create the command that will interact with the
-  // Run Action.
-  //G4String RawCommand("");
-  //G4GenericMessenger::Command& TupleCommand = fMessenger->DeclareProperty("event",
-  //RawCommand,
-  //"Set to use event-level metrics in n-tuple");
   fMessenger->DeclareMethod("event", &NobleG4RunAction::SetTupleState);
   
-  //TupleCommand.SetParameterName("event", true);
-  //TupleCommand.SetDefaultValue("true");
-  //G4cout << "Raw Command: " << RawCommand << G4endl;
- 
+  
   // Register accumulables to the accumulable manager.
   G4AccumulableManager* AccumulableManager = G4AccumulableManager::Instance();
   AccumulableManager->RegisterAccumulable(fEnergy);
@@ -163,13 +154,18 @@ void NobleG4RunAction::SetTupleState(G4String Val)
   
   // Use the helper function construct the analysis n-tuple.
   if(fEventLevelTuple)
-    {
-      G4cout << "Constructing event-level n-tuple." << G4endl;
-      ConstructEventTuple();
-    }
+  {
+    G4cout << "Constructing event-level n-tuple." << G4endl;
+    ConstructEventTuple();
+  }
   else
-    {
-      G4cout << "Constructing step-level n-tuple." << G4endl;
-      ConstructStepTuple();
-    }
+  {
+    G4cout << "Constructing step-level n-tuple." << G4endl;
+    ConstructStepTuple();
+  }
+  //else
+  //{
+  //  G4cout << "Constructing step-level H2." << G4endl;
+  //  ConstructStepH2();
+  //}
 }

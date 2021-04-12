@@ -71,7 +71,7 @@ void ConstructEventTuple()
 
 G4double CalcR(const G4double dEdx)
 {
-  G4double Field = 0.5; // kV/cm
+  G4double Field = 0.750; // kV/cm
   G4double Eps = 0.07*pow(Field, -0.85);
   return (1 - ( Eps * dEdx ) / ( 1 + Eps * dEdx ));
 }
@@ -100,26 +100,26 @@ void PopulateStepTuple(const G4Step* Step)
 
   // Retrieve/calculate various step-level quantities.
   G4double dE = Step->GetTotalEnergyDeposit();
-  G4double dI = dE - Step->GetNonIonizingEnergyDeposit();
+  //G4double dI = dE - Step->GetNonIonizingEnergyDeposit();
   G4double dx = Step->GetStepLength() / 10;
   G4ThreeVector dS = Step->GetDeltaPosition();
-  G4double dSx = dS.x();
-  G4double dSy = dS.y();
-  G4double dSz = dS.z();
+  //G4double dSx = dS.x();
+  //G4double dSy = dS.y();
+  //G4double dSz = dS.z();
 
   // Retrieve the current track and corresponding track ID/PDG code.
-  G4Track* Track = Step->GetTrack();
-  G4int TrackID = Track->GetTrackID();
-  G4int PDG = Track->GetParticleDefinition()->GetPDGEncoding();
+  //G4Track* Track = Step->GetTrack();
+  //G4int TrackID = Track->GetTrackID();
+  //G4int PDG = Track->GetParticleDefinition()->GetPDGEncoding();
 
   // Retrieve the pre- and post- step points.
-  G4StepPoint* p0 = Step->GetPreStepPoint();
-  G4StepPoint* p1 = Step->GetPostStepPoint();
-  G4ThreeVector x0 = p0->GetPosition();
-  G4ThreeVector x1 = p1->GetPosition();
+  //G4StepPoint* p0 = Step->GetPreStepPoint();
+  //G4StepPoint* p1 = Step->GetPostStepPoint();
+  //G4ThreeVector x0 = p0->GetPosition();
+  //G4ThreeVector x1 = p1->GetPosition();
 
   // Calculate the average particle kinetic energy for the step.
-  G4double KE = (p0->GetKineticEnergy() + p1->GetKineticEnergy())/2.0;
+  //G4double KE = (p0->GetKineticEnergy() + p1->GetKineticEnergy())/2.0;
 
   // Retrieve the current event number.
   G4int NEvent = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
