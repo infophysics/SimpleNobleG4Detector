@@ -125,7 +125,7 @@ void PopulateStepTuple(const G4Step* Step)
   G4int NEvent = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
   // Calculate the escape probability.
-  G4double R = CalcR(dE/dx);
+  //G4double R = CalcR(dE/dx);
 
   // Fill the n-tuple.
   AnalysisManager->FillNtupleDColumn(0, dE);

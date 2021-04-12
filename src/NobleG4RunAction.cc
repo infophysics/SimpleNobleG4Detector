@@ -45,7 +45,7 @@ NobleG4RunAction::~NobleG4RunAction()
   delete G4AnalysisManager::Instance();
 }
 
-void NobleG4RunAction::BeginOfRunAction(const G4Run* Run)
+void NobleG4RunAction::BeginOfRunAction(const G4Run*)
 { 
   // Inform the RunManager to save random number seed.
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
