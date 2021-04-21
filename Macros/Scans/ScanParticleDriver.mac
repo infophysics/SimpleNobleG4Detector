@@ -1,0 +1,66 @@
+# Initialize kernel.
+/run/initialize
+
+# Analysis settings.
+/NobleG4/event_tuple true
+
+
+# Set the verbosity.
+/control/verbose 1
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+
+# Set the secondary production cuts.
+/run/setCut 0.001 mm
+
+# Set various aliases.
+/control/alias NEvents 10000
+
+# 100 V/cm runs.
+/NobleG4/field 0.1
+/control/alias fieldname 100V
+
+/control/alias particle electron
+/control/alias pdg e-
+/control/execute ScanParticle.mac
+
+/control/alias particle photon
+/control/alias pdg gamma
+/control/execute ScanParticle.mac
+
+# 1125 V/cm runs.
+/NobleG4/field 1.125
+/control/alias fieldname 1125V
+
+/control/alias particle electron
+/control/alias pdg e-
+/control/execute ScanParticle.mac
+
+/control/alias particle photon
+/control/alias pdg gamma
+/control/execute ScanParticle.mac
+
+# 2500 V/cm runs.
+/NobleG4/field 2.500
+/control/alias fieldname 2500V
+
+/control/alias particle electron
+/control/alias pdg e-
+/control/execute ScanParticle.mac
+
+/control/alias particle photon
+/control/alias pdg gamma
+/control/execute ScanParticle.mac
+
+# 1000 V/cm runs.
+#/NobleG4/field 1.0
+#/control/alias fieldname 1000V
+
+#/control/alias particle electron
+#/control/alias pdg e-
+#/control/execute ScanParticle.mac
+
+#/control/alias particle photon
+#/control/alias pdg gamma
+#/control/execute ScanParticle.mac

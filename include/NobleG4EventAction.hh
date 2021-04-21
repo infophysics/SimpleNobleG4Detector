@@ -21,6 +21,7 @@ class NobleG4EventAction : public G4UserEventAction
     void AddElectrons(G4double Electrons) { fElectrons += Electrons; }
     void AddPhotons(G4double Photons) { fPhotons += Photons; }
     G4bool GetTupleState();
+    G4double GetField();
   
   private:
     NobleG4RunAction* fRunAction;

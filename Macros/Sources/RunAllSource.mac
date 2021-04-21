@@ -2,7 +2,8 @@
 /run/initialize
 
 # Analysis settings.
-/NobleG4/tuple/event false
+/NobleG4/event_tuple false
+/NobleG4/field 0.5
 
 # Set the verbosity.
 /control/verbose 1
@@ -14,7 +15,7 @@
 /run/setCut 0.001 mm
 
 # Set the number of events to be generated.
-/control/alias NEvents 10000
+/control/alias NEvents 1000
 
 /control/execute 113Sn_ceK2_364keV.mac
 /control/execute 133Ba_gamma_356keV.mac
@@ -35,3 +36,5 @@
 /control/execute 7Li_compton_42keV.mac
 /control/execute 7Li_compton_76keV.mac
 /control/execute 7Li_compton_86keV.mac
+/control/execute 37Ar_ecK_3keV.mac
+/control/execute 55Fe_ecK_6keV.mac

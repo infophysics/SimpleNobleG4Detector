@@ -13,10 +13,10 @@ void ConstructStepH2();
 void ConstructEventTuple();
 
 // Helper function for calculating the escape probability.
-G4double CalcR(const G4double dEdx);
+G4double CalcR(const G4double dEdx, const G4double Field);
 
 // Helper function for calculating the escape probability.
-G4double CalcRForStep(const G4Step* Step);
+G4double CalcRForStep(const G4Step* Step, const G4double Field);
 
 // Helper function for calculating the number of electrons (Argon).
 G4double ArCalcQY(const G4double dE, const G4double R);

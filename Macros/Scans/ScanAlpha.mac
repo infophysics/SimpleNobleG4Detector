@@ -1,0 +1,3026 @@
+# Initialize kernel.
+/run/initialize
+
+# Analysis settings.
+/NobleG4/event_tuple true
+
+# Set the verbosity.
+/control/verbose 1
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+
+# Set the secondary production cuts.
+/run/setCut 0.001 mm
+
+# Set various aliases.
+/control/alias NEvents 10000
+
+/NobleG4/field 0.500
+/control/alias fieldname 500V
+/control/alias particle alpha
+/control/alias pdg alpha
+
+# Set the impinging particle type and energy.
+/gun/particle {pdg}
+
+/analysis/setFileName {fieldname}/scan_{particle}_10keV
+/gun/energy 10 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_20keV
+/gun/energy 20 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_30keV
+/gun/energy 30 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_40keV
+/gun/energy 40 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_50keV
+/gun/energy 50 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_60keV
+/gun/energy 60 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_70keV
+/gun/energy 70 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_80keV
+/gun/energy 80 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_90keV
+/gun/energy 90 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_100keV
+/gun/energy 100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_110keV
+/gun/energy 110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_120keV
+/gun/energy 120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_130keV
+/gun/energy 130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_140keV
+/gun/energy 140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_150keV
+/gun/energy 150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_160keV
+/gun/energy 160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_170keV
+/gun/energy 170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_180keV
+/gun/energy 180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_190keV
+/gun/energy 190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_200keV
+/gun/energy 200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_210keV
+/gun/energy 210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_220keV
+/gun/energy 220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_230keV
+/gun/energy 230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_240keV
+/gun/energy 240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_250keV
+/gun/energy 250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_260keV
+/gun/energy 260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_270keV
+/gun/energy 270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_280keV
+/gun/energy 280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_290keV
+/gun/energy 290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_300keV
+/gun/energy 300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_310keV
+/gun/energy 310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_320keV
+/gun/energy 320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_330keV
+/gun/energy 330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_340keV
+/gun/energy 340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_350keV
+/gun/energy 350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_360keV
+/gun/energy 360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_370keV
+/gun/energy 370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_380keV
+/gun/energy 380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_390keV
+/gun/energy 390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_400keV
+/gun/energy 400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_410keV
+/gun/energy 410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_420keV
+/gun/energy 420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_430keV
+/gun/energy 430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_440keV
+/gun/energy 440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_450keV
+/gun/energy 450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_460keV
+/gun/energy 460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_470keV
+/gun/energy 470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_480keV
+/gun/energy 480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_490keV
+/gun/energy 490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_500keV
+/gun/energy 500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_510keV
+/gun/energy 510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_520keV
+/gun/energy 520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_530keV
+/gun/energy 530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_540keV
+/gun/energy 540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_550keV
+/gun/energy 550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_560keV
+/gun/energy 560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_570keV
+/gun/energy 570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_580keV
+/gun/energy 580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_590keV
+/gun/energy 590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_600keV
+/gun/energy 600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_610keV
+/gun/energy 610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_620keV
+/gun/energy 620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_630keV
+/gun/energy 630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_640keV
+/gun/energy 640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_650keV
+/gun/energy 650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_660keV
+/gun/energy 660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_670keV
+/gun/energy 670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_680keV
+/gun/energy 680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_690keV
+/gun/energy 690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_700keV
+/gun/energy 700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_710keV
+/gun/energy 710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_720keV
+/gun/energy 720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_730keV
+/gun/energy 730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_740keV
+/gun/energy 740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_750keV
+/gun/energy 750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_760keV
+/gun/energy 760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_770keV
+/gun/energy 770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_780keV
+/gun/energy 780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_790keV
+/gun/energy 790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_800keV
+/gun/energy 800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_810keV
+/gun/energy 810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_820keV
+/gun/energy 820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_830keV
+/gun/energy 830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_840keV
+/gun/energy 840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_850keV
+/gun/energy 850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_860keV
+/gun/energy 860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_870keV
+/gun/energy 870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_880keV
+/gun/energy 880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_890keV
+/gun/energy 890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_900keV
+/gun/energy 900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_910keV
+/gun/energy 910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_920keV
+/gun/energy 920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_930keV
+/gun/energy 930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_940keV
+/gun/energy 940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_950keV
+/gun/energy 950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_960keV
+/gun/energy 960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_970keV
+/gun/energy 970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_980keV
+/gun/energy 980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_990keV
+/gun/energy 990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1000keV
+/gun/energy 1000 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1010keV
+/gun/energy 1010 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1020keV
+/gun/energy 1020 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1030keV
+/gun/energy 1030 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1040keV
+/gun/energy 1040 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1050keV
+/gun/energy 1050 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1060keV
+/gun/energy 1060 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1070keV
+/gun/energy 1070 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1080keV
+/gun/energy 1080 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1090keV
+/gun/energy 1090 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1100keV
+/gun/energy 1100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1110keV
+/gun/energy 1110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1120keV
+/gun/energy 1120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1130keV
+/gun/energy 1130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1140keV
+/gun/energy 1140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1150keV
+/gun/energy 1150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1160keV
+/gun/energy 1160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1170keV
+/gun/energy 1170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1180keV
+/gun/energy 1180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1190keV
+/gun/energy 1190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1200keV
+/gun/energy 1200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1210keV
+/gun/energy 1210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1220keV
+/gun/energy 1220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1230keV
+/gun/energy 1230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1240keV
+/gun/energy 1240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1250keV
+/gun/energy 1250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1260keV
+/gun/energy 1260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1270keV
+/gun/energy 1270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1280keV
+/gun/energy 1280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1290keV
+/gun/energy 1290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1300keV
+/gun/energy 1300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1310keV
+/gun/energy 1310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1320keV
+/gun/energy 1320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1330keV
+/gun/energy 1330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1340keV
+/gun/energy 1340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1350keV
+/gun/energy 1350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1360keV
+/gun/energy 1360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1370keV
+/gun/energy 1370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1380keV
+/gun/energy 1380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1390keV
+/gun/energy 1390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1400keV
+/gun/energy 1400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1410keV
+/gun/energy 1410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1420keV
+/gun/energy 1420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1430keV
+/gun/energy 1430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1440keV
+/gun/energy 1440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1450keV
+/gun/energy 1450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1460keV
+/gun/energy 1460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1470keV
+/gun/energy 1470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1480keV
+/gun/energy 1480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1490keV
+/gun/energy 1490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1500keV
+/gun/energy 1500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1510keV
+/gun/energy 1510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1520keV
+/gun/energy 1520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1530keV
+/gun/energy 1530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1540keV
+/gun/energy 1540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1550keV
+/gun/energy 1550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1560keV
+/gun/energy 1560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1570keV
+/gun/energy 1570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1580keV
+/gun/energy 1580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1590keV
+/gun/energy 1590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1600keV
+/gun/energy 1600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1610keV
+/gun/energy 1610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1620keV
+/gun/energy 1620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1630keV
+/gun/energy 1630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1640keV
+/gun/energy 1640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1650keV
+/gun/energy 1650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1660keV
+/gun/energy 1660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1670keV
+/gun/energy 1670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1680keV
+/gun/energy 1680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1690keV
+/gun/energy 1690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1700keV
+/gun/energy 1700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1710keV
+/gun/energy 1710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1720keV
+/gun/energy 1720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1730keV
+/gun/energy 1730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1740keV
+/gun/energy 1740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1750keV
+/gun/energy 1750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1760keV
+/gun/energy 1760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1770keV
+/gun/energy 1770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1780keV
+/gun/energy 1780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1790keV
+/gun/energy 1790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1800keV
+/gun/energy 1800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1810keV
+/gun/energy 1810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1820keV
+/gun/energy 1820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1830keV
+/gun/energy 1830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1840keV
+/gun/energy 1840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1850keV
+/gun/energy 1850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1860keV
+/gun/energy 1860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1870keV
+/gun/energy 1870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1880keV
+/gun/energy 1880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1890keV
+/gun/energy 1890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1900keV
+/gun/energy 1900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1910keV
+/gun/energy 1910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1920keV
+/gun/energy 1920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1930keV
+/gun/energy 1930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1940keV
+/gun/energy 1940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1950keV
+/gun/energy 1950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1960keV
+/gun/energy 1960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1970keV
+/gun/energy 1970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1980keV
+/gun/energy 1980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_1990keV
+/gun/energy 1990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2000keV
+/gun/energy 2000 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2010keV
+/gun/energy 2010 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2020keV
+/gun/energy 2020 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2030keV
+/gun/energy 2030 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2040keV
+/gun/energy 2040 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2050keV
+/gun/energy 2050 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2060keV
+/gun/energy 2060 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2070keV
+/gun/energy 2070 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2080keV
+/gun/energy 2080 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2090keV
+/gun/energy 2090 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2100keV
+/gun/energy 2100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2110keV
+/gun/energy 2110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2120keV
+/gun/energy 2120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2130keV
+/gun/energy 2130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2140keV
+/gun/energy 2140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2150keV
+/gun/energy 2150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2160keV
+/gun/energy 2160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2170keV
+/gun/energy 2170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2180keV
+/gun/energy 2180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2190keV
+/gun/energy 2190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2200keV
+/gun/energy 2200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2210keV
+/gun/energy 2210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2220keV
+/gun/energy 2220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2230keV
+/gun/energy 2230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2240keV
+/gun/energy 2240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2250keV
+/gun/energy 2250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2260keV
+/gun/energy 2260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2270keV
+/gun/energy 2270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2280keV
+/gun/energy 2280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2290keV
+/gun/energy 2290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2300keV
+/gun/energy 2300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2310keV
+/gun/energy 2310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2320keV
+/gun/energy 2320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2330keV
+/gun/energy 2330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2340keV
+/gun/energy 2340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2350keV
+/gun/energy 2350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2360keV
+/gun/energy 2360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2370keV
+/gun/energy 2370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2380keV
+/gun/energy 2380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2390keV
+/gun/energy 2390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2400keV
+/gun/energy 2400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2410keV
+/gun/energy 2410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2420keV
+/gun/energy 2420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2430keV
+/gun/energy 2430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2440keV
+/gun/energy 2440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2450keV
+/gun/energy 2450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2460keV
+/gun/energy 2460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2470keV
+/gun/energy 2470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2480keV
+/gun/energy 2480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2490keV
+/gun/energy 2490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2500keV
+/gun/energy 2500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2510keV
+/gun/energy 2510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2520keV
+/gun/energy 2520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2530keV
+/gun/energy 2530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2540keV
+/gun/energy 2540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2550keV
+/gun/energy 2550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2560keV
+/gun/energy 2560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2570keV
+/gun/energy 2570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2580keV
+/gun/energy 2580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2590keV
+/gun/energy 2590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2600keV
+/gun/energy 2600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2610keV
+/gun/energy 2610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2620keV
+/gun/energy 2620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2630keV
+/gun/energy 2630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2640keV
+/gun/energy 2640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2650keV
+/gun/energy 2650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2660keV
+/gun/energy 2660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2670keV
+/gun/energy 2670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2680keV
+/gun/energy 2680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2690keV
+/gun/energy 2690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2700keV
+/gun/energy 2700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2710keV
+/gun/energy 2710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2720keV
+/gun/energy 2720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2730keV
+/gun/energy 2730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2740keV
+/gun/energy 2740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2750keV
+/gun/energy 2750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2760keV
+/gun/energy 2760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2770keV
+/gun/energy 2770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2780keV
+/gun/energy 2780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2790keV
+/gun/energy 2790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2800keV
+/gun/energy 2800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2810keV
+/gun/energy 2810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2820keV
+/gun/energy 2820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2830keV
+/gun/energy 2830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2840keV
+/gun/energy 2840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2850keV
+/gun/energy 2850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2860keV
+/gun/energy 2860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2870keV
+/gun/energy 2870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2880keV
+/gun/energy 2880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2890keV
+/gun/energy 2890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2900keV
+/gun/energy 2900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2910keV
+/gun/energy 2910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2920keV
+/gun/energy 2920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2930keV
+/gun/energy 2930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2940keV
+/gun/energy 2940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2950keV
+/gun/energy 2950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2960keV
+/gun/energy 2960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2970keV
+/gun/energy 2970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2980keV
+/gun/energy 2980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_2990keV
+/gun/energy 2990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3000keV
+/gun/energy 3000 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3010keV
+/gun/energy 3010 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3020keV
+/gun/energy 3020 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3030keV
+/gun/energy 3030 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3040keV
+/gun/energy 3040 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3050keV
+/gun/energy 3050 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3060keV
+/gun/energy 3060 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3070keV
+/gun/energy 3070 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3080keV
+/gun/energy 3080 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3090keV
+/gun/energy 3090 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3100keV
+/gun/energy 3100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3110keV
+/gun/energy 3110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3120keV
+/gun/energy 3120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3130keV
+/gun/energy 3130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3140keV
+/gun/energy 3140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3150keV
+/gun/energy 3150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3160keV
+/gun/energy 3160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3170keV
+/gun/energy 3170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3180keV
+/gun/energy 3180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3190keV
+/gun/energy 3190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3200keV
+/gun/energy 3200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3210keV
+/gun/energy 3210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3220keV
+/gun/energy 3220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3230keV
+/gun/energy 3230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3240keV
+/gun/energy 3240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3250keV
+/gun/energy 3250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3260keV
+/gun/energy 3260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3270keV
+/gun/energy 3270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3280keV
+/gun/energy 3280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3290keV
+/gun/energy 3290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3300keV
+/gun/energy 3300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3310keV
+/gun/energy 3310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3320keV
+/gun/energy 3320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3330keV
+/gun/energy 3330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3340keV
+/gun/energy 3340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3350keV
+/gun/energy 3350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3360keV
+/gun/energy 3360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3370keV
+/gun/energy 3370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3380keV
+/gun/energy 3380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3390keV
+/gun/energy 3390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3400keV
+/gun/energy 3400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3410keV
+/gun/energy 3410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3420keV
+/gun/energy 3420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3430keV
+/gun/energy 3430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3440keV
+/gun/energy 3440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3450keV
+/gun/energy 3450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3460keV
+/gun/energy 3460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3470keV
+/gun/energy 3470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3480keV
+/gun/energy 3480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3490keV
+/gun/energy 3490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3500keV
+/gun/energy 3500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3510keV
+/gun/energy 3510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3520keV
+/gun/energy 3520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3530keV
+/gun/energy 3530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3540keV
+/gun/energy 3540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3550keV
+/gun/energy 3550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3560keV
+/gun/energy 3560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3570keV
+/gun/energy 3570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3580keV
+/gun/energy 3580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3590keV
+/gun/energy 3590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3600keV
+/gun/energy 3600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3610keV
+/gun/energy 3610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3620keV
+/gun/energy 3620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3630keV
+/gun/energy 3630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3640keV
+/gun/energy 3640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3650keV
+/gun/energy 3650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3660keV
+/gun/energy 3660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3670keV
+/gun/energy 3670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3680keV
+/gun/energy 3680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3690keV
+/gun/energy 3690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3700keV
+/gun/energy 3700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3710keV
+/gun/energy 3710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3720keV
+/gun/energy 3720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3730keV
+/gun/energy 3730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3740keV
+/gun/energy 3740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3750keV
+/gun/energy 3750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3760keV
+/gun/energy 3760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3770keV
+/gun/energy 3770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3780keV
+/gun/energy 3780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3790keV
+/gun/energy 3790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3800keV
+/gun/energy 3800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3810keV
+/gun/energy 3810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3820keV
+/gun/energy 3820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3830keV
+/gun/energy 3830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3840keV
+/gun/energy 3840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3850keV
+/gun/energy 3850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3860keV
+/gun/energy 3860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3870keV
+/gun/energy 3870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3880keV
+/gun/energy 3880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3890keV
+/gun/energy 3890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3900keV
+/gun/energy 3900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3910keV
+/gun/energy 3910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3920keV
+/gun/energy 3920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3930keV
+/gun/energy 3930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3940keV
+/gun/energy 3940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3950keV
+/gun/energy 3950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3960keV
+/gun/energy 3960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3970keV
+/gun/energy 3970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3980keV
+/gun/energy 3980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_3990keV
+/gun/energy 3990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4000keV
+/gun/energy 4000 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4010keV
+/gun/energy 4010 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4020keV
+/gun/energy 4020 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4030keV
+/gun/energy 4030 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4040keV
+/gun/energy 4040 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4050keV
+/gun/energy 4050 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4060keV
+/gun/energy 4060 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4070keV
+/gun/energy 4070 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4080keV
+/gun/energy 4080 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4090keV
+/gun/energy 4090 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4100keV
+/gun/energy 4100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4110keV
+/gun/energy 4110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4120keV
+/gun/energy 4120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4130keV
+/gun/energy 4130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4140keV
+/gun/energy 4140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4150keV
+/gun/energy 4150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4160keV
+/gun/energy 4160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4170keV
+/gun/energy 4170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4180keV
+/gun/energy 4180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4190keV
+/gun/energy 4190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4200keV
+/gun/energy 4200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4210keV
+/gun/energy 4210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4220keV
+/gun/energy 4220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4230keV
+/gun/energy 4230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4240keV
+/gun/energy 4240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4250keV
+/gun/energy 4250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4260keV
+/gun/energy 4260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4270keV
+/gun/energy 4270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4280keV
+/gun/energy 4280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4290keV
+/gun/energy 4290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4300keV
+/gun/energy 4300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4310keV
+/gun/energy 4310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4320keV
+/gun/energy 4320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4330keV
+/gun/energy 4330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4340keV
+/gun/energy 4340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4350keV
+/gun/energy 4350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4360keV
+/gun/energy 4360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4370keV
+/gun/energy 4370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4380keV
+/gun/energy 4380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4390keV
+/gun/energy 4390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4400keV
+/gun/energy 4400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4410keV
+/gun/energy 4410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4420keV
+/gun/energy 4420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4430keV
+/gun/energy 4430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4440keV
+/gun/energy 4440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4450keV
+/gun/energy 4450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4460keV
+/gun/energy 4460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4470keV
+/gun/energy 4470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4480keV
+/gun/energy 4480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4490keV
+/gun/energy 4490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4500keV
+/gun/energy 4500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4510keV
+/gun/energy 4510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4520keV
+/gun/energy 4520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4530keV
+/gun/energy 4530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4540keV
+/gun/energy 4540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4550keV
+/gun/energy 4550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4560keV
+/gun/energy 4560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4570keV
+/gun/energy 4570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4580keV
+/gun/energy 4580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4590keV
+/gun/energy 4590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4600keV
+/gun/energy 4600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4610keV
+/gun/energy 4610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4620keV
+/gun/energy 4620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4630keV
+/gun/energy 4630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4640keV
+/gun/energy 4640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4650keV
+/gun/energy 4650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4660keV
+/gun/energy 4660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4670keV
+/gun/energy 4670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4680keV
+/gun/energy 4680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4690keV
+/gun/energy 4690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4700keV
+/gun/energy 4700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4710keV
+/gun/energy 4710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4720keV
+/gun/energy 4720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4730keV
+/gun/energy 4730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4740keV
+/gun/energy 4740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4750keV
+/gun/energy 4750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4760keV
+/gun/energy 4760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4770keV
+/gun/energy 4770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4780keV
+/gun/energy 4780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4790keV
+/gun/energy 4790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4800keV
+/gun/energy 4800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4810keV
+/gun/energy 4810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4820keV
+/gun/energy 4820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4830keV
+/gun/energy 4830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4840keV
+/gun/energy 4840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4850keV
+/gun/energy 4850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4860keV
+/gun/energy 4860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4870keV
+/gun/energy 4870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4880keV
+/gun/energy 4880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4890keV
+/gun/energy 4890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4900keV
+/gun/energy 4900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4910keV
+/gun/energy 4910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4920keV
+/gun/energy 4920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4930keV
+/gun/energy 4930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4940keV
+/gun/energy 4940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4950keV
+/gun/energy 4950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4960keV
+/gun/energy 4960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4970keV
+/gun/energy 4970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4980keV
+/gun/energy 4980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_4990keV
+/gun/energy 4990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5000keV
+/gun/energy 5000 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5010keV
+/gun/energy 5010 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5020keV
+/gun/energy 5020 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5030keV
+/gun/energy 5030 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5040keV
+/gun/energy 5040 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5050keV
+/gun/energy 5050 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5060keV
+/gun/energy 5060 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5070keV
+/gun/energy 5070 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5080keV
+/gun/energy 5080 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5090keV
+/gun/energy 5090 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5100keV
+/gun/energy 5100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5110keV
+/gun/energy 5110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5120keV
+/gun/energy 5120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5130keV
+/gun/energy 5130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5140keV
+/gun/energy 5140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5150keV
+/gun/energy 5150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5160keV
+/gun/energy 5160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5170keV
+/gun/energy 5170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5180keV
+/gun/energy 5180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5190keV
+/gun/energy 5190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5200keV
+/gun/energy 5200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5210keV
+/gun/energy 5210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5220keV
+/gun/energy 5220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5230keV
+/gun/energy 5230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5240keV
+/gun/energy 5240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5250keV
+/gun/energy 5250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5260keV
+/gun/energy 5260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5270keV
+/gun/energy 5270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5280keV
+/gun/energy 5280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5290keV
+/gun/energy 5290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5300keV
+/gun/energy 5300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5310keV
+/gun/energy 5310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5320keV
+/gun/energy 5320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5330keV
+/gun/energy 5330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5340keV
+/gun/energy 5340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5350keV
+/gun/energy 5350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5360keV
+/gun/energy 5360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5370keV
+/gun/energy 5370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5380keV
+/gun/energy 5380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5390keV
+/gun/energy 5390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5400keV
+/gun/energy 5400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5410keV
+/gun/energy 5410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5420keV
+/gun/energy 5420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5430keV
+/gun/energy 5430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5440keV
+/gun/energy 5440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5450keV
+/gun/energy 5450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5460keV
+/gun/energy 5460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5470keV
+/gun/energy 5470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5480keV
+/gun/energy 5480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5490keV
+/gun/energy 5490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5500keV
+/gun/energy 5500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5510keV
+/gun/energy 5510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5520keV
+/gun/energy 5520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5530keV
+/gun/energy 5530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5540keV
+/gun/energy 5540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5550keV
+/gun/energy 5550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5560keV
+/gun/energy 5560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5570keV
+/gun/energy 5570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5580keV
+/gun/energy 5580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5590keV
+/gun/energy 5590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5600keV
+/gun/energy 5600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5610keV
+/gun/energy 5610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5620keV
+/gun/energy 5620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5630keV
+/gun/energy 5630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5640keV
+/gun/energy 5640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5650keV
+/gun/energy 5650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5660keV
+/gun/energy 5660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5670keV
+/gun/energy 5670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5680keV
+/gun/energy 5680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5690keV
+/gun/energy 5690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5700keV
+/gun/energy 5700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5710keV
+/gun/energy 5710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5720keV
+/gun/energy 5720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5730keV
+/gun/energy 5730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5740keV
+/gun/energy 5740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5750keV
+/gun/energy 5750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5760keV
+/gun/energy 5760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5770keV
+/gun/energy 5770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5780keV
+/gun/energy 5780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5790keV
+/gun/energy 5790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5800keV
+/gun/energy 5800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5810keV
+/gun/energy 5810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5820keV
+/gun/energy 5820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5830keV
+/gun/energy 5830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5840keV
+/gun/energy 5840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5850keV
+/gun/energy 5850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5860keV
+/gun/energy 5860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5870keV
+/gun/energy 5870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5880keV
+/gun/energy 5880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5890keV
+/gun/energy 5890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5900keV
+/gun/energy 5900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5910keV
+/gun/energy 5910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5920keV
+/gun/energy 5920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5930keV
+/gun/energy 5930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5940keV
+/gun/energy 5940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5950keV
+/gun/energy 5950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5960keV
+/gun/energy 5960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5970keV
+/gun/energy 5970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5980keV
+/gun/energy 5980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_5990keV
+/gun/energy 5990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6000keV
+/gun/energy 6000 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6010keV
+/gun/energy 6010 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6020keV
+/gun/energy 6020 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6030keV
+/gun/energy 6030 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6040keV
+/gun/energy 6040 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6050keV
+/gun/energy 6050 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6060keV
+/gun/energy 6060 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6070keV
+/gun/energy 6070 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6080keV
+/gun/energy 6080 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6090keV
+/gun/energy 6090 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6100keV
+/gun/energy 6100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6110keV
+/gun/energy 6110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6120keV
+/gun/energy 6120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6130keV
+/gun/energy 6130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6140keV
+/gun/energy 6140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6150keV
+/gun/energy 6150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6160keV
+/gun/energy 6160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6170keV
+/gun/energy 6170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6180keV
+/gun/energy 6180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6190keV
+/gun/energy 6190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6200keV
+/gun/energy 6200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6210keV
+/gun/energy 6210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6220keV
+/gun/energy 6220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6230keV
+/gun/energy 6230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6240keV
+/gun/energy 6240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6250keV
+/gun/energy 6250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6260keV
+/gun/energy 6260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6270keV
+/gun/energy 6270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6280keV
+/gun/energy 6280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6290keV
+/gun/energy 6290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6300keV
+/gun/energy 6300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6310keV
+/gun/energy 6310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6320keV
+/gun/energy 6320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6330keV
+/gun/energy 6330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6340keV
+/gun/energy 6340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6350keV
+/gun/energy 6350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6360keV
+/gun/energy 6360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6370keV
+/gun/energy 6370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6380keV
+/gun/energy 6380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6390keV
+/gun/energy 6390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6400keV
+/gun/energy 6400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6410keV
+/gun/energy 6410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6420keV
+/gun/energy 6420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6430keV
+/gun/energy 6430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6440keV
+/gun/energy 6440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6450keV
+/gun/energy 6450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6460keV
+/gun/energy 6460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6470keV
+/gun/energy 6470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6480keV
+/gun/energy 6480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6490keV
+/gun/energy 6490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6500keV
+/gun/energy 6500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6510keV
+/gun/energy 6510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6520keV
+/gun/energy 6520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6530keV
+/gun/energy 6530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6540keV
+/gun/energy 6540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6550keV
+/gun/energy 6550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6560keV
+/gun/energy 6560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6570keV
+/gun/energy 6570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6580keV
+/gun/energy 6580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6590keV
+/gun/energy 6590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6600keV
+/gun/energy 6600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6610keV
+/gun/energy 6610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6620keV
+/gun/energy 6620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6630keV
+/gun/energy 6630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6640keV
+/gun/energy 6640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6650keV
+/gun/energy 6650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6660keV
+/gun/energy 6660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6670keV
+/gun/energy 6670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6680keV
+/gun/energy 6680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6690keV
+/gun/energy 6690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6700keV
+/gun/energy 6700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6710keV
+/gun/energy 6710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6720keV
+/gun/energy 6720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6730keV
+/gun/energy 6730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6740keV
+/gun/energy 6740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6750keV
+/gun/energy 6750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6760keV
+/gun/energy 6760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6770keV
+/gun/energy 6770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6780keV
+/gun/energy 6780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6790keV
+/gun/energy 6790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6800keV
+/gun/energy 6800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6810keV
+/gun/energy 6810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6820keV
+/gun/energy 6820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6830keV
+/gun/energy 6830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6840keV
+/gun/energy 6840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6850keV
+/gun/energy 6850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6860keV
+/gun/energy 6860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6870keV
+/gun/energy 6870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6880keV
+/gun/energy 6880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6890keV
+/gun/energy 6890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6900keV
+/gun/energy 6900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6910keV
+/gun/energy 6910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6920keV
+/gun/energy 6920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6930keV
+/gun/energy 6930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6940keV
+/gun/energy 6940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6950keV
+/gun/energy 6950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6960keV
+/gun/energy 6960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6970keV
+/gun/energy 6970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6980keV
+/gun/energy 6980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_6990keV
+/gun/energy 6990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7000keV
+/gun/energy 7000 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7010keV
+/gun/energy 7010 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7020keV
+/gun/energy 7020 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7030keV
+/gun/energy 7030 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7040keV
+/gun/energy 7040 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7050keV
+/gun/energy 7050 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7060keV
+/gun/energy 7060 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7070keV
+/gun/energy 7070 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7080keV
+/gun/energy 7080 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7090keV
+/gun/energy 7090 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7100keV
+/gun/energy 7100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7110keV
+/gun/energy 7110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7120keV
+/gun/energy 7120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7130keV
+/gun/energy 7130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7140keV
+/gun/energy 7140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7150keV
+/gun/energy 7150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7160keV
+/gun/energy 7160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7170keV
+/gun/energy 7170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7180keV
+/gun/energy 7180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7190keV
+/gun/energy 7190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7200keV
+/gun/energy 7200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7210keV
+/gun/energy 7210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7220keV
+/gun/energy 7220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7230keV
+/gun/energy 7230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7240keV
+/gun/energy 7240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7250keV
+/gun/energy 7250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7260keV
+/gun/energy 7260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7270keV
+/gun/energy 7270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7280keV
+/gun/energy 7280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7290keV
+/gun/energy 7290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7300keV
+/gun/energy 7300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7310keV
+/gun/energy 7310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7320keV
+/gun/energy 7320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7330keV
+/gun/energy 7330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7340keV
+/gun/energy 7340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7350keV
+/gun/energy 7350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7360keV
+/gun/energy 7360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7370keV
+/gun/energy 7370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7380keV
+/gun/energy 7380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7390keV
+/gun/energy 7390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7400keV
+/gun/energy 7400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7410keV
+/gun/energy 7410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7420keV
+/gun/energy 7420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7430keV
+/gun/energy 7430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7440keV
+/gun/energy 7440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7450keV
+/gun/energy 7450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7460keV
+/gun/energy 7460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7470keV
+/gun/energy 7470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7480keV
+/gun/energy 7480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7490keV
+/gun/energy 7490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7500keV
+/gun/energy 7500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7510keV
+/gun/energy 7510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7520keV
+/gun/energy 7520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7530keV
+/gun/energy 7530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7540keV
+/gun/energy 7540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7550keV
+/gun/energy 7550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7560keV
+/gun/energy 7560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7570keV
+/gun/energy 7570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7580keV
+/gun/energy 7580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7590keV
+/gun/energy 7590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7600keV
+/gun/energy 7600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7610keV
+/gun/energy 7610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7620keV
+/gun/energy 7620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7630keV
+/gun/energy 7630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7640keV
+/gun/energy 7640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7650keV
+/gun/energy 7650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7660keV
+/gun/energy 7660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7670keV
+/gun/energy 7670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7680keV
+/gun/energy 7680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7690keV
+/gun/energy 7690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7700keV
+/gun/energy 7700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7710keV
+/gun/energy 7710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7720keV
+/gun/energy 7720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7730keV
+/gun/energy 7730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7740keV
+/gun/energy 7740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7750keV
+/gun/energy 7750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7760keV
+/gun/energy 7760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7770keV
+/gun/energy 7770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7780keV
+/gun/energy 7780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7790keV
+/gun/energy 7790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7800keV
+/gun/energy 7800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7810keV
+/gun/energy 7810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7820keV
+/gun/energy 7820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7830keV
+/gun/energy 7830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7840keV
+/gun/energy 7840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7850keV
+/gun/energy 7850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7860keV
+/gun/energy 7860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7870keV
+/gun/energy 7870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7880keV
+/gun/energy 7880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7890keV
+/gun/energy 7890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7900keV
+/gun/energy 7900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7910keV
+/gun/energy 7910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7920keV
+/gun/energy 7920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7930keV
+/gun/energy 7930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7940keV
+/gun/energy 7940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7950keV
+/gun/energy 7950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7960keV
+/gun/energy 7960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7970keV
+/gun/energy 7970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7980keV
+/gun/energy 7980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_7990keV
+/gun/energy 7990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8000keV
+/gun/energy 8000 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8010keV
+/gun/energy 8010 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8020keV
+/gun/energy 8020 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8030keV
+/gun/energy 8030 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8040keV
+/gun/energy 8040 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8050keV
+/gun/energy 8050 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8060keV
+/gun/energy 8060 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8070keV
+/gun/energy 8070 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8080keV
+/gun/energy 8080 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8090keV
+/gun/energy 8090 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8100keV
+/gun/energy 8100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8110keV
+/gun/energy 8110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8120keV
+/gun/energy 8120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8130keV
+/gun/energy 8130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8140keV
+/gun/energy 8140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8150keV
+/gun/energy 8150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8160keV
+/gun/energy 8160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8170keV
+/gun/energy 8170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8180keV
+/gun/energy 8180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8190keV
+/gun/energy 8190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8200keV
+/gun/energy 8200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8210keV
+/gun/energy 8210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8220keV
+/gun/energy 8220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8230keV
+/gun/energy 8230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8240keV
+/gun/energy 8240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8250keV
+/gun/energy 8250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8260keV
+/gun/energy 8260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8270keV
+/gun/energy 8270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8280keV
+/gun/energy 8280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8290keV
+/gun/energy 8290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8300keV
+/gun/energy 8300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8310keV
+/gun/energy 8310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8320keV
+/gun/energy 8320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8330keV
+/gun/energy 8330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8340keV
+/gun/energy 8340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8350keV
+/gun/energy 8350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8360keV
+/gun/energy 8360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8370keV
+/gun/energy 8370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8380keV
+/gun/energy 8380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8390keV
+/gun/energy 8390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8400keV
+/gun/energy 8400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8410keV
+/gun/energy 8410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8420keV
+/gun/energy 8420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8430keV
+/gun/energy 8430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8440keV
+/gun/energy 8440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8450keV
+/gun/energy 8450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8460keV
+/gun/energy 8460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8470keV
+/gun/energy 8470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8480keV
+/gun/energy 8480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8490keV
+/gun/energy 8490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8500keV
+/gun/energy 8500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8510keV
+/gun/energy 8510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8520keV
+/gun/energy 8520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8530keV
+/gun/energy 8530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8540keV
+/gun/energy 8540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8550keV
+/gun/energy 8550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8560keV
+/gun/energy 8560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8570keV
+/gun/energy 8570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8580keV
+/gun/energy 8580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8590keV
+/gun/energy 8590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8600keV
+/gun/energy 8600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8610keV
+/gun/energy 8610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8620keV
+/gun/energy 8620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8630keV
+/gun/energy 8630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8640keV
+/gun/energy 8640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8650keV
+/gun/energy 8650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8660keV
+/gun/energy 8660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8670keV
+/gun/energy 8670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8680keV
+/gun/energy 8680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8690keV
+/gun/energy 8690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8700keV
+/gun/energy 8700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8710keV
+/gun/energy 8710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8720keV
+/gun/energy 8720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8730keV
+/gun/energy 8730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8740keV
+/gun/energy 8740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8750keV
+/gun/energy 8750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8760keV
+/gun/energy 8760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8770keV
+/gun/energy 8770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8780keV
+/gun/energy 8780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8790keV
+/gun/energy 8790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8800keV
+/gun/energy 8800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8810keV
+/gun/energy 8810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8820keV
+/gun/energy 8820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8830keV
+/gun/energy 8830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8840keV
+/gun/energy 8840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8850keV
+/gun/energy 8850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8860keV
+/gun/energy 8860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8870keV
+/gun/energy 8870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8880keV
+/gun/energy 8880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8890keV
+/gun/energy 8890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8900keV
+/gun/energy 8900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8910keV
+/gun/energy 8910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8920keV
+/gun/energy 8920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8930keV
+/gun/energy 8930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8940keV
+/gun/energy 8940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8950keV
+/gun/energy 8950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8960keV
+/gun/energy 8960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8970keV
+/gun/energy 8970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8980keV
+/gun/energy 8980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_8990keV
+/gun/energy 8990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9000keV
+/gun/energy 9000 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9010keV
+/gun/energy 9010 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9020keV
+/gun/energy 9020 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9030keV
+/gun/energy 9030 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9040keV
+/gun/energy 9040 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9050keV
+/gun/energy 9050 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9060keV
+/gun/energy 9060 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9070keV
+/gun/energy 9070 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9080keV
+/gun/energy 9080 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9090keV
+/gun/energy 9090 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9100keV
+/gun/energy 9100 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9110keV
+/gun/energy 9110 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9120keV
+/gun/energy 9120 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9130keV
+/gun/energy 9130 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9140keV
+/gun/energy 9140 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9150keV
+/gun/energy 9150 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9160keV
+/gun/energy 9160 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9170keV
+/gun/energy 9170 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9180keV
+/gun/energy 9180 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9190keV
+/gun/energy 9190 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9200keV
+/gun/energy 9200 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9210keV
+/gun/energy 9210 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9220keV
+/gun/energy 9220 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9230keV
+/gun/energy 9230 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9240keV
+/gun/energy 9240 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9250keV
+/gun/energy 9250 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9260keV
+/gun/energy 9260 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9270keV
+/gun/energy 9270 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9280keV
+/gun/energy 9280 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9290keV
+/gun/energy 9290 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9300keV
+/gun/energy 9300 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9310keV
+/gun/energy 9310 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9320keV
+/gun/energy 9320 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9330keV
+/gun/energy 9330 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9340keV
+/gun/energy 9340 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9350keV
+/gun/energy 9350 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9360keV
+/gun/energy 9360 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9370keV
+/gun/energy 9370 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9380keV
+/gun/energy 9380 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9390keV
+/gun/energy 9390 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9400keV
+/gun/energy 9400 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9410keV
+/gun/energy 9410 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9420keV
+/gun/energy 9420 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9430keV
+/gun/energy 9430 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9440keV
+/gun/energy 9440 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9450keV
+/gun/energy 9450 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9460keV
+/gun/energy 9460 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9470keV
+/gun/energy 9470 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9480keV
+/gun/energy 9480 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9490keV
+/gun/energy 9490 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9500keV
+/gun/energy 9500 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9510keV
+/gun/energy 9510 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9520keV
+/gun/energy 9520 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9530keV
+/gun/energy 9530 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9540keV
+/gun/energy 9540 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9550keV
+/gun/energy 9550 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9560keV
+/gun/energy 9560 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9570keV
+/gun/energy 9570 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9580keV
+/gun/energy 9580 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9590keV
+/gun/energy 9590 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9600keV
+/gun/energy 9600 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9610keV
+/gun/energy 9610 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9620keV
+/gun/energy 9620 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9630keV
+/gun/energy 9630 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9640keV
+/gun/energy 9640 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9650keV
+/gun/energy 9650 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9660keV
+/gun/energy 9660 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9670keV
+/gun/energy 9670 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9680keV
+/gun/energy 9680 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9690keV
+/gun/energy 9690 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9700keV
+/gun/energy 9700 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9710keV
+/gun/energy 9710 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9720keV
+/gun/energy 9720 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9730keV
+/gun/energy 9730 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9740keV
+/gun/energy 9740 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9750keV
+/gun/energy 9750 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9760keV
+/gun/energy 9760 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9770keV
+/gun/energy 9770 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9780keV
+/gun/energy 9780 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9790keV
+/gun/energy 9790 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9800keV
+/gun/energy 9800 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9810keV
+/gun/energy 9810 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9820keV
+/gun/energy 9820 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9830keV
+/gun/energy 9830 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9840keV
+/gun/energy 9840 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9850keV
+/gun/energy 9850 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9860keV
+/gun/energy 9860 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9870keV
+/gun/energy 9870 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9880keV
+/gun/energy 9880 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9890keV
+/gun/energy 9890 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9900keV
+/gun/energy 9900 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9910keV
+/gun/energy 9910 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9920keV
+/gun/energy 9920 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9930keV
+/gun/energy 9930 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9940keV
+/gun/energy 9940 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9950keV
+/gun/energy 9950 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9960keV
+/gun/energy 9960 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9970keV
+/gun/energy 9970 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9980keV
+/gun/energy 9980 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_9990keV
+/gun/energy 9990 keV
+/run/beamOn {NEvents}
+/analysis/setFileName {fieldname}/scan_{particle}_10000keV
+/gun/energy 10000 keV
+/run/beamOn {NEvents}

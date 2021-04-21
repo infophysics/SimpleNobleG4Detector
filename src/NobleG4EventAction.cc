@@ -36,6 +36,10 @@ void NobleG4EventAction::EndOfEventAction(const G4Event* Event)
 
 G4bool NobleG4EventAction::GetTupleState()
 {
-  
   return fRunAction->GetTupleState();
+}
+
+G4double NobleG4EventAction::GetField()
+{
+  return fRunAction->GetField();
 }

@@ -27,6 +27,8 @@ class NobleG4RunAction : public G4UserRunAction
     void AddPhotons(G4double Photons);
     G4bool GetTupleState() { return fEventLevelTuple; }
     void SetTupleState(G4String Val);
+    G4double GetField() { return fField; }
+    void SetField(G4String Val);
 
   private:
     G4Accumulable<G4double> fEnergy;
@@ -34,6 +36,7 @@ class NobleG4RunAction : public G4UserRunAction
     G4Accumulable<G4double> fPhotons;
     G4GenericMessenger* fMessenger;
     G4bool fEventLevelTuple;
+    G4double fField;
 };
 
 #endif

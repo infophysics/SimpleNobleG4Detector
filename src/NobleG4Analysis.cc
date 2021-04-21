@@ -69,18 +69,17 @@ void ConstructEventTuple()
   AnalysisManager->FinishNtuple();
 }
 
-G4double CalcR(const G4double dEdx)
+G4double CalcR(const G4double dEdx, const G4double Field)
 {
-  G4double Field = 0.750; // kV/cm
   G4double Eps = 0.07*pow(Field, -0.85);
   return (1 - ( Eps * dEdx ) / ( 1 + Eps * dEdx ));
 }
 
-G4double CalcRForStep(const G4Step* Step)
+G4double CalcRForStep(const G4Step* Step, const G4double Field)
 {
   G4double dE = Step->GetTotalEnergyDeposit();
   G4double dx = Step->GetStepLength() / 10;
-  return CalcR(dE/dx);
+  return CalcR(dE/dx, Field);
 }
 
 G4double ArCalcQY(const G4double dE, const G4double R)

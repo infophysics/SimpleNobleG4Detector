@@ -69,9 +69,11 @@ void NobleG4PrimaryGeneratorAction::GeneratePrimaries(G4Event* Event)
   // Generate primary vertex. The primary vertex is uniformly
   // generated across 80% of the XY face of the volume, and
   // at a depth of 10%.
-  G4double Size = 0.8; 
-  G4double X0 = Size * CubeX * (G4UniformRand()-0.5);
-  G4double Y0 = Size * CubeY * (G4UniformRand()-0.5);
+  //G4double Size = 0.8; 
+  //G4double X0 = Size * CubeX * (G4UniformRand()-0.5);
+  //G4double Y0 = Size * CubeY * (G4UniformRand()-0.5);
+  G4double X0 = 0 * CubeX;
+  G4double Y0 = 0 * CubeY;
   G4double Z0 = -0.4 * CubeZ;
   
   fParticleGun->SetParticlePosition(G4ThreeVector(X0,Y0,Z0));

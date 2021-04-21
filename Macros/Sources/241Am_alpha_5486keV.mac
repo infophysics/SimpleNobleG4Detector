@@ -1,0 +1,11 @@
+# Macro file for NobleG4.
+
+# Set the output file name.
+/analysis/setFileName 241Am_alpha_5486keV
+
+# Set the impinging particle type and energy.
+/gun/particle alpha
+/gun/energy 5.4857 MeV
+
+# Start the run.
+/run/beamOn {NEvents}

@@ -1,4 +1,5 @@
 #include <sstream>
+#include <string>
 #include "NobleG4RunAction.hh"
 #include "NobleG4PrimaryGeneratorAction.hh"
 #include "NobleG4DetectorConstruction.hh"
@@ -18,15 +19,17 @@ NobleG4RunAction::NobleG4RunAction()
   fEnergy(0.0),
   fElectrons(0.0),
   fPhotons(0.0),
-  fEventLevelTuple(true)
+  fEventLevelTuple(true),
+  fField(0.5)
 {
   // Create the Generic Messenger. Used for interacting
   // with custom macro commands.
   fMessenger = new G4GenericMessenger(this,
-				      "/NobleG4/tuple/",
+				      "/NobleG4/",
 				      "Control of n-tuple quantities");
 
-  fMessenger->DeclareMethod("event", &NobleG4RunAction::SetTupleState);
+  fMessenger->DeclareMethod("event_tuple", &NobleG4RunAction::SetTupleState);
+  fMessenger->DeclareMethod("field", &NobleG4RunAction::SetField);
   
   
   // Register accumulables to the accumulable manager.
@@ -168,4 +171,9 @@ void NobleG4RunAction::SetTupleState(G4String Val)
   //  G4cout << "Constructing step-level H2." << G4endl;
   //  ConstructStepH2();
   //}
+}
+
+void NobleG4RunAction::SetField(G4String Val)
+{
+  fField = std::stof(Val);
 }

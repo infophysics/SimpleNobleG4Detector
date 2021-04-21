@@ -40,7 +40,7 @@ void NobleG4SteppingAction::UserSteppingAction(const G4Step* Step)
   G4double dE = Step->GetTotalEnergyDeposit();
 
   // Calculate escape factor.
-  G4double R = CalcRForStep(Step);
+  G4double R = CalcRForStep(Step, fEventAction->GetField());
 
   // Calculate and collect electrons/photons.
   G4double e = ArCalcQY(dE, R);

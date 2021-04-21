@@ -1,5 +1,7 @@
 *~
 *.png
 *.root
+*.csv
+*.npy
 *build/
-*SourceMacros/G4Output/
+*Macros/G4Output/
