@@ -1,0 +1,30 @@
+# Macro file for NobleG4.
+
+# Initialize kernel.
+/run/initialize
+
+# Analysis settings.
+/NobleG4/event_tuple false
+/NobleG4/field 0.5
+
+# Set the verbosity.
+/control/verbose 1
+/run/verbose 1
+/event/verbose 0
+/tracking/verbose 0
+
+# Set the secondary production cuts.
+/run/setCut 0.001 mm
+
+# Set the number of events to be generated.
+/control/alias NEvents 10
+
+# Set the output file name.
+/analysis/setFileName Muon_1GeV
+
+# Set the impinging particle type and energy.
+/gun/particle mu-
+/gun/energy 1000 MeV
+
+# Start the run.
+/run/beamOn {NEvents}
