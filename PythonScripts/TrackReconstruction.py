@@ -9,23 +9,31 @@ import pandas as pd
 def LoadDF(File):
     Steps = uproot.open(File)['Kinematics']
     DF = Steps.pandas.df(['N', 'dE', 'dx', 'x0', 'y0', 'z0', 'x1', 'y1', 'z1', 'id', 'pdg'])
-    print(DF.head())
+    print(DF.head(10))
     #Voxelize(DF[DF.N == 0][:10], 0.2)
     #for i in range(5): PlotEvent(DF[DF.N == i], i)
-    Segmentize2(DF[DF.N == 0])
+    Segmentize2(DF[DF.N == 1])
+
+    DF[DF.N == 0].to_csv('dump.csv', index=False)
 
 def Segmentize2(Data):
     PrimaryMask = Data['id'].to_numpy() == 1
 
     CumL = list()
     DX = Data[PrimaryMask].dx.to_numpy()
-    Sum = 0
+    SumL = 0
     for i in range(len(Data[PrimaryMask])):
-        Sum += DX[i]
-        CumL.append(Sum)
-    TotalLength = CumL[-1]
+        #Row = Data[PrimaryMask].iloc[i]
+        #P1 = Row.x0, Row.y0, Row.z0
+        #d = Distance(P1, Row)
+        SumL += 10*DX[i]
+        CumL.append(SumL)
+    TotalLength = SumL
     print(TotalLength)
+    print(np.sum(Data[PrimaryMask].dE.to_numpy()))
+    print(np.sum(Data.dE.to_numpy()))
     print(Data[np.invert(PrimaryMask)].head(10))
+    PlotEvent(Data[PrimaryMask], 0)
     
 def DCA(P1, P2, P):
     P = P.x1, P.y1, P.z1
@@ -186,7 +194,7 @@ def Voxelize(Event, Res):
     
     
 def main():
-    File = '/home/mueller/Projects/SimpleNobleG4Detector/build/Muon_5MeV.root'
+    File = '/home/mueller/Projects/SimpleNobleG4Detector/NobleG4_build/Muon_5MeV.root'
     LoadDF(File)
 
 if __name__ == '__main__':

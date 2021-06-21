@@ -1,4 +1,5 @@
 #include "NobleG4DetectorConstruction.hh"
+#include "NobleG4SensitiveDetector.hh"
 
 #include "G4RunManager.hh"
 #include "G4NistManager.hh"
@@ -10,6 +11,7 @@
 #include "G4LogicalVolume.hh"
 #include "G4PVPlacement.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4SDManager.hh"
 
 
 NobleG4DetectorConstruction::NobleG4DetectorConstruction()
@@ -54,6 +56,11 @@ G4VPhysicalVolume* NobleG4DetectorConstruction::Construct()
 
   // Set the sensitive volume.
   fActiveVolume = LogicalWorld;
+
+  NobleG4SensitiveDetector* SD = new NobleG4SensitiveDetector("NobleG4SD");
+  G4SDManager* SDManager = G4SDManager::GetSDMpointer();
+  SDManager->AddNewDetector(SD);
+  LogicalWorld->SetSensitiveDetector(SD);
   
   return PhysicalWorld;
 }

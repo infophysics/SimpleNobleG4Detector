@@ -14,17 +14,17 @@
 /tracking/verbose 0
 
 # Set the secondary production cuts.
-/run/setCut 0.001 mm
+/run/setCut 0.01 mm
 
 # Set the number of events to be generated.
-/control/alias NEvents 1000
+/control/alias NEvents 10
 
 # Set the output file name.
 /analysis/setFileName Muon_5MeV
 
 # Set the impinging particle type and energy.
 /gun/particle mu-
-/gun/energy 5 MeV
+/gun/energy 20 MeV
 
 # Start the run.
 /run/beamOn {NEvents}
