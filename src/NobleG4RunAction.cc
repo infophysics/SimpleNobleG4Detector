@@ -19,7 +19,8 @@ NobleG4RunAction::NobleG4RunAction()
   fEnergy(0.0),
   fElectrons(0.0),
   fPhotons(0.0),
-  fEventLevelTuple(true),
+  fTrackingOutput(false),
+  fEventOutput(false),
   fField(0.5)
 {
   // Create the Generic Messenger. Used for interacting
@@ -28,8 +29,8 @@ NobleG4RunAction::NobleG4RunAction()
 				      "/NobleG4/",
 				      "Control of n-tuple quantities");
 
-  fMessenger->DeclareMethod("event_tuple", &NobleG4RunAction::SetTupleState);
   fMessenger->DeclareMethod("field", &NobleG4RunAction::SetField);
+  fMessenger->DeclareMethod("output", &NobleG4RunAction::SetOutput);
   
   
   // Register accumulables to the accumulable manager.
@@ -150,7 +151,7 @@ void NobleG4RunAction::AddPhotons(G4double Photons)
   fPhotons += Photons;
 }
 
-void NobleG4RunAction::SetTupleState(G4String Val)
+/*void NobleG4RunAction::SetTupleState(G4String Val)
 {
   G4cout << "SET TUPLE STATE: " << Val << G4endl;
   fEventLevelTuple = (Val == "true");
@@ -171,6 +172,24 @@ void NobleG4RunAction::SetTupleState(G4String Val)
   //  G4cout << "Constructing step-level H2." << G4endl;
   //  ConstructStepH2();
   //}
+  }*/
+
+void NobleG4RunAction::SetOutput(G4String Val)
+{
+  fTrackingOutput = (Val == "tracking");
+  //fStepOutput = (Val == "step");
+  fEventOutput = (Val == "event");
+
+  if( fTrackingOutput )
+  {
+    G4cout << "Constructing tracking n-tuple." << G4endl;
+    ConstructTrackingTuple();
+  }
+  else if( fEventOutput )
+  {
+    G4cout << "Constructing event-level n-tuple." << G4endl;
+    ConstructEventTuple();
+  }
 }
 
 void NobleG4RunAction::SetField(G4String Val)

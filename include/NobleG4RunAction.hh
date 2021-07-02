@@ -15,28 +15,30 @@ class G4Run;
 
 class NobleG4RunAction : public G4UserRunAction
 {
-  public:
-    NobleG4RunAction();
-    virtual ~NobleG4RunAction();
-
-    virtual void BeginOfRunAction(const G4Run*);
-    virtual void EndOfRunAction(const G4Run*);
-
-    void AddEnergy(G4double Energy);
-    void AddElectrons(G4double Electrons);
-    void AddPhotons(G4double Photons);
-    G4bool GetTupleState() { return fEventLevelTuple; }
-    void SetTupleState(G4String Val);
-    G4double GetField() { return fField; }
-    void SetField(G4String Val);
-
-  private:
-    G4Accumulable<G4double> fEnergy;
-    G4Accumulable<G4double> fElectrons;
-    G4Accumulable<G4double> fPhotons;
-    G4GenericMessenger* fMessenger;
-    G4bool fEventLevelTuple;
-    G4double fField;
+public:
+  NobleG4RunAction();
+  virtual ~NobleG4RunAction();
+  
+  virtual void BeginOfRunAction(const G4Run*);
+  virtual void EndOfRunAction(const G4Run*);
+  
+  void AddEnergy(G4double Energy);
+  void AddElectrons(G4double Electrons);
+  void AddPhotons(G4double Photons);
+  G4bool GetTrackingOutput() { return fTrackingOutput; }
+  G4bool GetEventOutput() { return fEventOutput; }
+  void SetOutput(G4String Val);
+  G4double GetField() { return fField; }
+  void SetField(G4String Val);
+  
+private:
+  G4Accumulable<G4double> fEnergy;
+  G4Accumulable<G4double> fElectrons;
+  G4Accumulable<G4double> fPhotons;
+  G4GenericMessenger* fMessenger;
+  G4bool fTrackingOutput;
+  G4bool fEventOutput;
+  G4double fField;
 };
 
 #endif

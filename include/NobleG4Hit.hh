@@ -18,15 +18,21 @@ public:
   void SetdE(const G4double e){ dE = e; }
   void Setdx(const G4double x){ dx = x; }
   void SetParentID(const G4int pid){ PID = pid; }
+  void SetRRBin(const G4int bin){ RRBin = bin; }
 
   G4ThreeVector P0() const { return p0; }
   G4ThreeVector P1() const { return p1; }
   G4double GetdE() const { return dE; }
   G4double Getdx() const { return dx; }
+  G4int GetRRBin() const { return RRBin; }
+
+  G4bool IsPrimary() const { return ID == 1; }
+  G4bool IsBinned() const { return RRBin != -1; }
 
 private:
   G4int ID;
   G4int PID;
+  G4int RRBin;
   G4ThreeVector p0;
   G4ThreeVector p1;
   G4double dE;

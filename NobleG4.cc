@@ -9,6 +9,9 @@
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
 
+#include "G4MuonMinus.hh"
+#include "G4DecayTable.hh"
+
 #include "Randomize.hh"
 
 
@@ -32,7 +35,12 @@ int main(int argc,char** argv)
   G4VModularPhysicsList* PhysicsList = new FTFP_BERT;
   PhysicsList->SetVerboseLevel(1);
   RunManager->SetUserInitialization(PhysicsList);
-    
+
+  // Toggle Muon-y things.
+  G4MuonMinus::MuonMinus()->GetDecayTable()->DumpInfo();
+  //G4cout << "Muon life time: " << G4MuonMinus::MuonMinus()->GetPDGLifeTime() << G4endl;
+  G4MuonMinus::MuonMinus()->SetPDGLifeTime(1000000000);
+ 
   // User action initialization.
   RunManager->SetUserInitialization(new NobleG4ActionInitialization());
   

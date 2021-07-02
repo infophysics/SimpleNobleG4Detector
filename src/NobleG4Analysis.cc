@@ -3,6 +3,7 @@
 #include "G4RunManager.hh"
 #include "G4Step.hh"
 #include "g4root.hh"
+//#include "g4csv.hh"
 
 void ConstructStepTuple()
 {
@@ -38,18 +39,6 @@ void ConstructStepTuple()
   AnalysisManager->FinishNtuple();
 }
 
-void ConstructStepH2()
-{
-  // Retrieve an instance of the Analysis Manager.
-  auto AnalysisManager = G4AnalysisManager::Instance();
-  G4cout << "Using " << AnalysisManager->GetType() << G4endl;
-
-  // Create the H2 and initialize.
-  AnalysisManager->CreateH2("dEdx", "dE/dx vs. dE",
-			   100, 0, 25,
-			   100, 0, 0.1);
-}
-
 void ConstructEventTuple()
 {
   // Construct the n-tuple. To be called during the RunAction.
@@ -66,6 +55,25 @@ void ConstructEventTuple()
   AnalysisManager->CreateNtupleDColumn("E");      // Total energy.
   AnalysisManager->CreateNtupleDColumn("e");      // Total electrons.
   AnalysisManager->CreateNtupleDColumn("p");      // Total photons.
+  AnalysisManager->FinishNtuple();
+}
+
+void ConstructTrackingTuple()
+{
+  // Construct the n-tuple. To be called during the RunAction.
+  auto AnalysisManager = G4AnalysisManager::Instance();
+  G4cout << "Using " << AnalysisManager->GetType() << G4endl;
+
+  // Set verbosity and n-tuple merging parameters.
+  AnalysisManager->SetVerboseLevel(1);
+  AnalysisManager->SetNtupleMerging(true);
+
+  // Create the n-tuple and initialize each branch.
+  AnalysisManager->CreateNtuple("G4Tree", "G4Tree");
+  AnalysisManager->CreateNtupleIColumn("N");      // Event number.
+  AnalysisManager->CreateNtupleDColumn("dE");     // Ionizing energy of the step.
+  AnalysisManager->CreateNtupleDColumn("dx");     // Step length.
+  AnalysisManager->CreateNtupleIColumn("B");      // Assigned RR bin number.
   AnalysisManager->FinishNtuple();
 }
 
@@ -149,20 +157,7 @@ void PopulateStepTuple(const G4Step* Step)
   AnalysisManager->AddNtupleRow();
 }
 
-void PopulateStepH2(const G4Step* Step)
-{
-  // Get an instance of the Analysis Manager.
-  auto AnalysisManager = G4AnalysisManager::Instance();
-
-  // Retrieve/calculate various step-level quantities.
-  G4double dE = Step->GetTotalEnergyDeposit();
-  G4double dx = Step->GetStepLength() / 10;
-  G4double dEdx = dE/dx;
-
-  AnalysisManager->FillH2(0, dEdx, dE);
-}
-
-void PopulateEventTuple(const G4double N, const G4double E, const G4double e, const G4double p)
+void PopulateEventTuple(const G4int N, const G4double E, const G4double e, const G4double p)
 {
   // Get an instance of the Analysis Manager.
   auto AnalysisManager = G4AnalysisManager::Instance();
@@ -172,5 +167,18 @@ void PopulateEventTuple(const G4double N, const G4double E, const G4double e, co
   AnalysisManager->FillNtupleDColumn(1, E);
   AnalysisManager->FillNtupleDColumn(2, e);
   AnalysisManager->FillNtupleDColumn(3, p);
+  AnalysisManager->AddNtupleRow();
+}
+
+void PopulateTrackingTuple(const G4int N, const G4double dE, const G4double dx, const G4int B)
+{
+  // Get an instance of the Analysis Manager.
+  auto AnalysisManager = G4AnalysisManager::Instance();
+
+  // Fill the n-tuple.
+  AnalysisManager->FillNtupleIColumn(0, N);
+  AnalysisManager->FillNtupleDColumn(1, dE);
+  AnalysisManager->FillNtupleDColumn(2, dx/10);
+  AnalysisManager->FillNtupleIColumn(3, B);
   AnalysisManager->AddNtupleRow();
 }

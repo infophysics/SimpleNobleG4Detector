@@ -4,7 +4,7 @@
 /run/initialize
 
 # Analysis settings.
-/NobleG4/event_tuple false
+/NobleG4/output tracking
 /NobleG4/field 0.5
 
 # Set the verbosity.
@@ -14,17 +14,25 @@
 /tracking/verbose 0
 
 # Set the secondary production cuts.
-/run/setCut 0.01 mm
+/run/setCut 0.007705 mm
+#/run/setCut 0.05 mm
+
+# Deactivate various irrelevant processes.
+/process/list
+#/process/inactivate Decay
+/process/inactivate muMinusCaptureAtRest
+/process/inactivate hadElastic
+/process/inactivate protonInelastic
 
 # Set the number of events to be generated.
-/control/alias NEvents 10
+/control/alias NEvents 5000
 
 # Set the output file name.
-/analysis/setFileName Muon_5MeV
+/analysis/setFileName Muon_10keV
 
 # Set the impinging particle type and energy.
 /gun/particle mu-
-/gun/energy 20 MeV
+/gun/energy 250 MeV
 
 # Start the run.
 /run/beamOn {NEvents}

@@ -17,3 +17,4 @@ void NobleG4Hit::Print()
 	 << dx << " ("
 	 << dE/dx << " MeV/cm)." << G4endl;
 }
+

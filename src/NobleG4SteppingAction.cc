@@ -52,5 +52,5 @@ void NobleG4SteppingAction::UserSteppingAction(const G4Step* Step)
 
   // Use a helper function to populate the analysis n-tuple.
   //if(!fEventAction->GetTupleState()) PopulateStepTuple(Step);
-  if(!fEventAction->GetTupleState()) PopulateStepTuple(Step);
+  //if(!fEventAction->GetTupleState()) PopulateStepTuple(Step);
 }
