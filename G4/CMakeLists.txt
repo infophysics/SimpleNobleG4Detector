@@ -45,9 +45,6 @@ target_link_libraries(NobleG4 ${Geant4_LIBRARIES})
 #
 set(EXAMPLENOBLEG4_SCRIPTS
   init_vis.mac
-  run1.mac
-  vis.mac
-  scan.mac
   )
 
 foreach(_script ${EXAMPLENOBLEG4_SCRIPTS})

@@ -11,7 +11,8 @@ class Dataset
 {
 public:
   Dataset(const std::string DatasetName, const std::string DataFileName, const std::string G4FileName );
-  virtual double Eval( const TF2* BareReco, const bool GenerateSummary=false ) = 0;
+  //virtual double Eval( const TF2* BareReco, const bool GenerateSummary=false ) = 0;
+  virtual void Eval( const std::vector<double> &Parameters, std::vector<double> &Chi2s ) = 0;
   void SetN( const size_t N);
 
   std::vector<double> X() const { return x; }
@@ -32,7 +33,8 @@ protected:
   std::vector<double> sz;
   std::vector<double> UniqueFields;
 
-  TFile *G4File;
-  TTree *G4Tree;
-  
+  std::vector<int> G4N;
+  std::vector<int> G4B;
+  std::vector<double> G4dE;
+  std::vector<double> G4dx;
 };

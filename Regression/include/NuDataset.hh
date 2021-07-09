@@ -12,7 +12,8 @@ class NuDataset : public Dataset
 {
 public:
   using Dataset::Dataset;
-  double Eval( const TF2* BareReco, const bool GenerateSummary=false);
+  //double Eval( const TF2* BareReco, const bool GenerateSummary=false);
+  void Eval( const std::vector<double> &Parameters, std::vector<double> &Chi2s );
   void SetNBins( const unsigned int N ) { NBins = N; }
   void SetBinL( const float L ) { BinL = L; }
   std::vector<double> GetFields();
