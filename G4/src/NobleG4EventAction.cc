@@ -48,6 +48,26 @@ void NobleG4EventAction::EndOfEventAction(const G4Event* Event)
   // Populate (event-level) analysis n-tuple.
   if( this->GetEventOutput() ) PopulateEventTuple(Event->GetEventID(), fEnergy, fElectrons, fPhotons);
 
+  // Populate (step-level) analysis n-tuple.
+  if( this->GetStepOutput() )
+  {
+    // If the hit collection ID has not yet been defined, then retrieve it.
+    if( fHCID == -1 ) fHCID = G4SDManager::GetSDMpointer()->GetCollectionID("NobleG4HitCollection");
+
+    // Retrieve the hit collection and the number of hit entries.
+    auto HitCollection = GetHitsCollection(fHCID, Event);
+    auto N = HitCollection->entries();
+
+    // Loop over each hit in the collection and save the hits that have been binned.
+    for ( std::size_t i(0); i < N; ++i)
+    {
+      auto Hit = (*HitCollection)[i];
+      PopulateStepTuple( Event->GetEventID(),
+			 Hit->GetdE(),
+			 Hit->Getdx() );
+    }
+  }
+  
   // Populate (tracking) analysis n-tuple.
   if( this->GetTrackingOutput() )
   {
@@ -70,17 +90,22 @@ void NobleG4EventAction::EndOfEventAction(const G4Event* Event)
 			       Hit->GetRRBin() );
       }
     }
-  }    
-}
-
-G4bool NobleG4EventAction::GetTrackingOutput()
-{
-  return fRunAction->GetTrackingOutput();
+  }   
 }
 
 G4bool NobleG4EventAction::GetEventOutput()
 {
   return fRunAction->GetEventOutput();
+}
+
+G4bool NobleG4EventAction::GetStepOutput()
+{
+  return fRunAction->GetStepOutput();
+}
+
+G4bool NobleG4EventAction::GetTrackingOutput()
+{
+  return fRunAction->GetTrackingOutput();
 }
 
 G4double NobleG4EventAction::GetField()

@@ -30,9 +30,9 @@ G4VPhysicalVolume* NobleG4DetectorConstruction::Construct()
   G4NistManager* NIST = G4NistManager::Instance();
 
   // Set volume parameters.
-  G4double CubeX = 1000*cm;
-  G4double CubeY = 1000*cm;
-  G4double CubeZ = 1000*cm;
+  G4double CubeX = 2000*cm;
+  G4double CubeY = 2000*cm;
+  G4double CubeZ = 2000*cm;
   G4Material* ActiveMat = NIST->FindOrBuildMaterial("G4_lAr");
 
   // World creation.

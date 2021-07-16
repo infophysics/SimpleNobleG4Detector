@@ -24,8 +24,9 @@ public:
   void AddEnergy(G4double Energy) { fEnergy += Energy; }
   void AddElectrons(G4double Electrons) { fElectrons += Electrons; }
   void AddPhotons(G4double Photons) { fPhotons += Photons; }
-  G4bool GetTrackingOutput();
   G4bool GetEventOutput();
+  G4bool GetStepOutput();
+  G4bool GetTrackingOutput();
   G4double GetField();
   
 private:

@@ -13,20 +13,8 @@ void ConstructEventTuple();
 // Helper function for constructing the (tracking) analysis n-tuple.
 void ConstructTrackingTuple();
 
-// Helper function for calculating the escape probability.
-G4double CalcR(const G4double dEdx, const G4double Field);
-
-// Helper function for calculating the escape probability.
-G4double CalcRForStep(const G4Step* Step, const G4double Field);
-
-// Helper function for calculating the number of electrons (Argon).
-G4double ArCalcQY(const G4double dE, const G4double R);
-
-// Helper function for calculating the number of photons (Argon).
-G4double ArCalcLY(const G4double dE, const G4double R);
-
 // Helper function for populating the (step-level) analysis n-tuple.
-void PopulateStepTuple(const G4Step* Step);
+void PopulateStepTuple(const G4int N, const G4double dE, const G4double dx);
 
 // Helper function for populating the (event-level) analysis n-tuple.
 void PopulateEventTuple(const G4int N, const G4double E, const G4double e, const G4double p);

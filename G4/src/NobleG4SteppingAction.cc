@@ -38,19 +38,8 @@ void NobleG4SteppingAction::UserSteppingAction(const G4Step* Step)
 
   // Collect energy deposited in this step.
   G4double dE = Step->GetTotalEnergyDeposit();
-
-  // Calculate escape factor.
-  G4double R = CalcRForStep(Step, fEventAction->GetField());
-
-  // Calculate and collect electrons/photons.
-  G4double e = ArCalcQY(dE, R);
-  G4double p = ArCalcLY(dE, R);
   
   fEventAction->AddEnergy(dE);
-  fEventAction->AddElectrons(e);
-  fEventAction->AddPhotons(p);
-
-  // Use a helper function to populate the analysis n-tuple.
-  //if(!fEventAction->GetTupleState()) PopulateStepTuple(Step);
-  //if(!fEventAction->GetTupleState()) PopulateStepTuple(Step);
+  fEventAction->AddElectrons(0);
+  fEventAction->AddPhotons(0);
 }

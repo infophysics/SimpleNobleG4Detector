@@ -25,8 +25,9 @@ public:
   void AddEnergy(G4double Energy);
   void AddElectrons(G4double Electrons);
   void AddPhotons(G4double Photons);
-  G4bool GetTrackingOutput() { return fTrackingOutput; }
   G4bool GetEventOutput() { return fEventOutput; }
+  G4bool GetStepOutput() { return fStepOutput; }
+  G4bool GetTrackingOutput() { return fTrackingOutput; }
   void SetOutput(G4String Val);
   G4double GetField() { return fField; }
   void SetField(G4String Val);
@@ -36,8 +37,9 @@ private:
   G4Accumulable<G4double> fElectrons;
   G4Accumulable<G4double> fPhotons;
   G4GenericMessenger* fMessenger;
-  G4bool fTrackingOutput;
   G4bool fEventOutput;
+  G4bool fStepOutput;
+  G4bool fTrackingOutput;
   G4double fField;
 };
 

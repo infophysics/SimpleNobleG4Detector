@@ -60,9 +60,7 @@ void NobleG4RunAction::BeginOfRunAction(const G4Run*)
 
   // Open the analysis output file.
   auto AnalysisManager = G4AnalysisManager::Instance();
-  //std::stringstream FileName;
-  //FileName << "1MeV_electron_Run" << Run->GetRunID();
-  AnalysisManager->OpenFile();//FileName.str());
+  AnalysisManager->OpenFile();
 }
 
 void NobleG4RunAction::EndOfRunAction(const G4Run* Run)
@@ -151,33 +149,10 @@ void NobleG4RunAction::AddPhotons(G4double Photons)
   fPhotons += Photons;
 }
 
-/*void NobleG4RunAction::SetTupleState(G4String Val)
-{
-  G4cout << "SET TUPLE STATE: " << Val << G4endl;
-  fEventLevelTuple = (Val == "true");
-  
-  // Use the helper function construct the analysis n-tuple.
-  if(fEventLevelTuple)
-  {
-    G4cout << "Constructing event-level n-tuple." << G4endl;
-    ConstructEventTuple();
-  }
-  else
-  {
-    G4cout << "Constructing step-level n-tuple." << G4endl;
-    ConstructStepTuple();
-  }
-  //else
-  //{
-  //  G4cout << "Constructing step-level H2." << G4endl;
-  //  ConstructStepH2();
-  //}
-  }*/
-
 void NobleG4RunAction::SetOutput(G4String Val)
 {
   fTrackingOutput = (Val == "tracking");
-  //fStepOutput = (Val == "step");
+  fStepOutput = (Val == "step");
   fEventOutput = (Val == "event");
 
   if( fTrackingOutput )
@@ -189,6 +164,11 @@ void NobleG4RunAction::SetOutput(G4String Val)
   {
     G4cout << "Constructing event-level n-tuple." << G4endl;
     ConstructEventTuple();
+  }
+  else if( fStepOutput )
+  {
+    G4cout << "Constructing step-level n-tuple." << G4endl;
+    ConstructStepTuple();
   }
 }
 
