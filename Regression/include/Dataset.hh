@@ -1,3 +1,6 @@
+#ifndef Dataset_hh
+#define Dataset_hh
+
 // C++ includes.
 #include <vector>
 #include <string>
@@ -7,13 +10,16 @@
 #include "TFile.h"
 #include "TTree.h"
 
+// Custom includes.
+#include "G4Input.hh"
+
 class Dataset
 {
 public:
-  Dataset(const std::string DatasetName, const std::string DataFileName, const std::string G4FileName );
-  //virtual double Eval( const TF2* BareReco, const bool GenerateSummary=false ) = 0;
-  virtual void Eval( const std::vector<double> &Parameters, std::vector<double> &Chi2s ) = 0;
+  Dataset( const std::string DatasetName, const std::string DataFileName );
+  virtual void Eval( const std::vector<double> &Parameters, std::vector<double> &Chi2s, const bool GenerateSummary=false ) = 0;
   void SetN( const size_t N);
+  void SetG4Input( G4Input* G4 ) { G4Data = G4; }
 
   std::vector<double> X() const { return x; }
   std::vector<double> Y() const { return y; }
@@ -33,8 +39,7 @@ protected:
   std::vector<double> sz;
   std::vector<double> UniqueFields;
 
-  std::vector<int> G4N;
-  std::vector<int> G4B;
-  std::vector<double> G4dE;
-  std::vector<double> G4dx;
+  G4Input* G4Data;
+  
 };
+#endif

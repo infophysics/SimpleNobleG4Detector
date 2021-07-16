@@ -1,6 +1,7 @@
 // C++ includes.
 #include <string>
 #include <chrono>
+#include <vector>
 
 // ROOT includes.
 #include "TF2.h"
@@ -8,7 +9,9 @@
 
 // Custom includes.
 #include "NuDataset.hh"
-
+#include "DMDataset.hh"
+#include "G4Input.hh"
+#include "Configuration.hh"
 
 int main()
 {
@@ -30,130 +33,162 @@ int main()
   // The general process is to configure the TF2 representing the bare recombination model and each
   // individual Dataset, then perform a grid search of the parameter space. 
 
-  // Configure the "bare" recombination model.
-  //TF2 *BareReco = new TF2( "bare_reco", "([0]*x / (1 + ( [1] / y) * x))", 0, 50);
+  std::cout << "Loading datasets..." << std::endl;
+
+  // Load the G4 data sources.
+  G4Input Muons( "Muons", "/home/mueller/Projects/SimpleNobleG4Detector/G4/build/Muon_10keV.root" );
+  G4Input Protons( "Protons", "/home/mueller/Projects/SimpleNobleG4Detector/G4/build/Proton_10keV.root" );
+  G4Input Deuterons( "Deuterons", "/home/mueller/Projects/SimpleNobleG4Detector/G4/build/Deuteron_10keV.root" );
+  G4Input DM_113Sn_ceK2_364keV( "113Sn_ceK2_364keV", "/home/mueller/Projects/SimpleNobleG4Detector/G4/build/113Sn_ceK2_364keV.root" );
+
+  // Configure the Scalettar 1982 DM dataset.
+  std::string Scalettar_113Sn_ceK2_364keV_Data( "/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/Scalettar1982_113Sn_ceK2_364keV_QY.csv");
+  DMDataset Scalettar_113Sn_ceK2_364keV( "Scalettar_113Sn_ceK2_364keV", Scalettar_113Sn_ceK2_364keV_Data );
+  Scalettar_113Sn_ceK2_364keV.SetQorL( true );
+  Scalettar_113Sn_ceK2_364keV.SetG4Input( &DM_113Sn_ceK2_364keV );
+  std::cout << "Loaded Scalettar 1982 113Sn_ceK2_364keV data." << std::endl;
   
   // Configure the ICARUS muon dataset.
-  std::string ICARUS_Muons_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_3Ton_muons.csv");
-  std::string ICARUS_Muons_G4("/home/mueller/Projects/SimpleNobleG4Detector/G4/build/Muon_10keV.root");
-  NuDataset ICARUS_Muons("ICARUS_Muons", ICARUS_Muons_Data, ICARUS_Muons_G4);
+  std::string ICARUS_Muons_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_3Ton_muons_absolute.csv");
+  NuDataset ICARUS_Muons("ICARUS_Muons", ICARUS_Muons_Data );
   ICARUS_Muons.SetNBins(100);
   ICARUS_Muons.SetBinL(0.5);
+  ICARUS_Muons.SetG4Input( &Muons );
+  std::cout << "Loaded ICARUS 3-Ton muons." << std::endl;
 
   // Configure the ICARUS proton dataset.
-  std::string ICARUS_Protons_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_3Ton_protons.csv");
-  std::string ICARUS_Protons_G4("/home/mueller/Projects/SimpleNobleG4Detector/G4/build/Proton_10keV.root");
-  NuDataset ICARUS_Protons("ICARUS_Protons", ICARUS_Protons_Data, ICARUS_Protons_G4);
+  std::string ICARUS_Protons_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_3Ton_protons_absolute.csv");
+  NuDataset ICARUS_Protons("ICARUS_Protons", ICARUS_Protons_Data );
   ICARUS_Protons.SetNBins(100);
   ICARUS_Protons.SetBinL(0.5);
+  ICARUS_Protons.SetG4Input( &Protons );
+  std::cout << "Loaded ICARUS 3-Ton protons." << std::endl;
 
-  // Configure the ArgoNeuT proton datasets.
-  std::string ArgoNeuT_Protons_80_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_80.csv");
-  std::string ArgoNeuT_Protons_80_G4("/home/mueller/Projects/SimpleNobleG4Detector/G4/build/Proton_10keV.root");
-  NuDataset ArgoNeuT_Protons_80("ArgoNeuT_Protons_80", ArgoNeuT_Protons_80_Data, ArgoNeuT_Protons_80_G4);
-  ArgoNeuT_Protons_80.SetNBins(100);
-  ArgoNeuT_Protons_80.SetBinL(0.5);
+  // Configure the ICARUS T600 muon dataset.
+  std::string T600_Muons_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_T600_protons.csv");
+  NuDataset T600_Muons("T600_Muons", T600_Muons_Data );
+  T600_Muons.SetNBins(100);
+  T600_Muons.SetBinL(0.5);
+  T600_Muons.SetG4Input( &Muons );
+  std::cout << "Loaded ICARUS T600 Muons." << std::endl;
 
-  std::string ArgoNeuT_Protons_60_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_60.csv");
-  std::string ArgoNeuT_Protons_60_G4("/home/mueller/Projects/SimpleNobleG4Detector/G4/build/Proton_10keV.root");
-  NuDataset ArgoNeuT_Protons_60("ArgoNeuT_Protons_60", ArgoNeuT_Protons_60_Data, ArgoNeuT_Protons_60_G4);
-  ArgoNeuT_Protons_60.SetNBins(100);
-  ArgoNeuT_Protons_60.SetBinL(0.5);
+  // Configure the ArgoNeuT proton dataset.
+  std::string ArgoNeuT_Protons_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons.csv");
+  NuDataset ArgoNeuT_Protons("ArgoNeuT_Protons", ArgoNeuT_Protons_Data );
+  ArgoNeuT_Protons.SetNBins(100);
+  ArgoNeuT_Protons.SetBinL(0.5);
+  ArgoNeuT_Protons.SetG4Input( &Protons );
+  std::cout << "Loaded ArgoNeuT Protons (combined)." << std::endl;
 
-  std::string ArgoNeuT_Protons_50_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_50.csv");
-  std::string ArgoNeuT_Protons_50_G4("/home/mueller/Projects/SimpleNobleG4Detector/G4/build/Proton_10keV.root");
-  NuDataset ArgoNeuT_Protons_50("ArgoNeuT_Protons_50", ArgoNeuT_Protons_50_Data, ArgoNeuT_Protons_50_G4);
-  ArgoNeuT_Protons_50.SetNBins(100);
-  ArgoNeuT_Protons_50.SetBinL(0.5);
+  // Configure the ArgoNeuT deuteron dataset.
+  std::string ArgoNeuT_Deuterons_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_deuterons.csv");
+  NuDataset ArgoNeuT_Deuterons("ArgoNeuT_Deuterons", ArgoNeuT_Deuterons_Data );
+  ArgoNeuT_Deuterons.SetNBins(100);
+  ArgoNeuT_Deuterons.SetBinL(0.5);
+  ArgoNeuT_Deuterons.SetG4Input( &Deuterons );
+  std::cout << "Loaded ArgoNeuT Deuterons (combined)." << std::endl;
+  
 
-  std::string ArgoNeuT_Protons_40_Data("/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_40.csv");
-  std::string ArgoNeuT_Protons_40_G4("/home/mueller/Projects/SimpleNobleG4Detector/G4/build/Proton_10keV.root");
-  NuDataset ArgoNeuT_Protons_40("ArgoNeuT_Protons_40", ArgoNeuT_Protons_40_Data, ArgoNeuT_Protons_40_G4);
-  ArgoNeuT_Protons_40.SetNBins(100);
-  ArgoNeuT_Protons_40.SetBinL(0.5);
+  std::cout << "Loaded all datasets... Done!" << std::endl;
 
-  std::vector<double> Parameters(64);
-  for( size_t i(0); i < 32; ++i )
-  {
-    Parameters[ 2 * i + 0 ] = 0.9155;
-    Parameters[ 2 * i + 1 ] = 0.0526;
-  }
-  std::vector<double> Chi2s(32, 0);
+  Configuration Config( "ArgoNeuT Best" );
+  Config.SetCubeDim(2);
+  Config.SetCubeLen( { 0.000600, 0.00010 } );
+  Config.SetCubeCen( { 0.915500, 0.05260 } );
+  Config.SetCubeN( 20 );
+  std::vector<double> Parameters = Config.GetParameterGrid();
+  std::vector<double> Chi2s( Parameters.size() / 2 );
 
+  TFile *SummaryTree = TFile::Open("RegressionSummary_Jul14.root", "recreate");
+  TTree *I3Ton_Protons = new TTree("3Ton_Protons", "3Ton_Protons");
+  TTree *I3Ton_Muons = new TTree("3Ton_Muons", "3Ton_Muons");
+  TTree *IT600_Muons = new TTree("T600_Muons", "T600_Muons");
+  TTree *TArgoNeuT_Protons = new TTree("ArgoNeuT_Protons", "ArgoNeuT_Protons");
+  TTree *TArgoNeuT_Deuterons = new TTree("ArgoNeuT_Deuterons", "ArgoNeuT_Deuterons");
+  TTree *TScalettar_113Sn_ceK2_364keV = new TTree("Scalettar_113Sn_ceK2_364keV", "Scalettar_113Sn_ceK2_364keV");
+  double p[2], chi2;
+  I3Ton_Protons->Branch("p0", p+0);
+  I3Ton_Protons->Branch("p1", p+1);
+  I3Ton_Protons->Branch("chi2", &chi2);
+  I3Ton_Muons->Branch("p0", p+0);
+  I3Ton_Muons->Branch("p1", p+1);
+  I3Ton_Muons->Branch("chi2", &chi2);
+  IT600_Muons->Branch("p0", p+0);
+  IT600_Muons->Branch("p1", p+1);
+  IT600_Muons->Branch("chi2", &chi2);
+  TArgoNeuT_Protons->Branch("p0", p+0);
+  TArgoNeuT_Protons->Branch("p1", p+1);
+  TArgoNeuT_Protons->Branch("chi2", &chi2);
+  TArgoNeuT_Deuterons->Branch("p0", p+0);
+  TArgoNeuT_Deuterons->Branch("p1", p+1);
+  TArgoNeuT_Deuterons->Branch("chi2", &chi2);
+  TScalettar_113Sn_ceK2_364keV->Branch("p0", p+0);
+  TScalettar_113Sn_ceK2_364keV->Branch("p1", p+1);
+  TScalettar_113Sn_ceK2_364keV->Branch("chi2", &chi2);
+  
   auto start = std::chrono::high_resolution_clock::now();
-  ICARUS_Protons.Eval( Parameters, Chi2s );
-  std::cout << "Resulting chi^2: " << Chi2s[0] << std::endl;
-  ICARUS_Muons.Eval( Parameters, Chi2s );
-  std::cout << "Resulting chi^2: " << Chi2s[0] << std::endl;
+  ICARUS_Protons.Eval( Parameters, Chi2s, false );
+  for( size_t i(0); i < Chi2s.size(); ++i)
+  {
+    p[0] = Parameters[ 2 * i + 0];
+    p[1] = Parameters[ 2 * i + 1];
+    chi2 = Chi2s[i];
+    I3Ton_Protons->Fill();
+  }
+  ICARUS_Muons.Eval( Parameters, Chi2s, false );
+  for( size_t i(0); i < Chi2s.size(); ++i)
+  {
+    p[0] = Parameters[ 2 * i + 0];
+    p[1] = Parameters[ 2 * i + 1];
+    chi2 = Chi2s[i];
+    I3Ton_Muons->Fill();
+  }
+  T600_Muons.Eval( Parameters, Chi2s, false );
+  for( size_t i(0); i < Chi2s.size(); ++i)
+  {
+    p[0] = Parameters[ 2 * i + 0];
+    p[1] = Parameters[ 2 * i + 1];
+    chi2 = Chi2s[i];
+    IT600_Muons->Fill();
+  }
+  ArgoNeuT_Protons.Eval( Parameters, Chi2s, false );
+  for( size_t i(0); i < Chi2s.size(); ++i)
+  {
+    p[0] = Parameters[ 2 * i + 0];
+    p[1] = Parameters[ 2 * i + 1];
+    chi2 = Chi2s[i];
+    TArgoNeuT_Protons->Fill();
+  }
+  ArgoNeuT_Deuterons.Eval( Parameters, Chi2s, false );
+  for( size_t i(0); i < Chi2s.size(); ++i)
+  {
+    p[0] = Parameters[ 2 * i + 0];
+    p[1] = Parameters[ 2 * i + 1];
+    chi2 = Chi2s[i];
+    TArgoNeuT_Deuterons->Fill();
+  }
+  Scalettar_113Sn_ceK2_364keV.Eval( Parameters, Chi2s, false );
+  for( size_t i(0); i < Chi2s.size(); ++i)
+  {
+    p[0] = Parameters[ 2 * i + 0];
+    p[1] = Parameters[ 2 * i + 1];
+    chi2 = Chi2s[i];
+    TScalettar_113Sn_ceK2_364keV->Fill();
+  }
+  I3Ton_Protons->Write();
+  I3Ton_Muons->Write();
+  IT600_Muons->Write();
+  TArgoNeuT_Protons->Write();
+  TArgoNeuT_Deuterons->Write();
+  TScalettar_113Sn_ceK2_364keV->Write();
+  SummaryTree->Close();
+  delete SummaryTree;
   auto stop = std::chrono::high_resolution_clock::now();
   auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
 
   std::cout << "Time taken by function call: "
 	    << duration.count()/1000000.0 << " seconds" << std::endl;
   
-  // Configure the variables for the parameter grid search, including a TTree to dump the results of
-  // each point in parameter space into for later access.
-  //double pCurrent[2], pBest[2], CurrentChi2, BestChi2(10000);
-  //double pBest[2];
-  /*TFile *RegSummary = TFile::Open("RegressionSummary6.root", "recreate");
-  TTree *RegTree = new TTree("RegTree", "RegTree");
-  RegTree->Branch("p0", pCurrent+0);
-  RegTree->Branch("p1", pCurrent+1);
-  RegTree->Branch("chi2", &CurrentChi2);
-
-
-  double ParN[2] = { 50, 50 };
-  double ParW[2] = { 0.000250, 0.00010 };
-  double ParC[2] = { 0.912625, 0.05405 }; //{ 0.91250, 0.05400 };
-  pBest[0] = ParC[0];
-  pBest[1] = ParC[1];
-  
-  for( int i( -1 * ParN[0] ); i <= ParN[0]; ++i)
-  {
-    std::cout << "Iteration " << i + ParN[0] << " with current best Chi^2: " << BestChi2 << "." << std::endl;
-    for( int j( -1 * ParN[1] ); j <= ParN[1]; ++j)
-    {
-      pCurrent[0] = ParC[0] + i * ParW[0];
-      pCurrent[1] = ParC[1] + j * ParW[1];
-      BareReco->SetParameters( pCurrent[0], pCurrent[1] );
-      CurrentChi2 = ICARUS_Muons.Eval( BareReco ) + ICARUS_Protons.Eval( BareReco );
-      if( CurrentChi2 < BestChi2 )
-      {
-	pBest[0] = pCurrent[0];
-	pBest[1] = pCurrent[1];
-	BestChi2 = CurrentChi2;
-      }
-      RegTree->Fill();
-    }
-  }
-
-  RegTree->Write();
-  RegSummary->Close();
-  delete RegSummary;
-
-  std::cout << "Best Parameters: (" << pBest[0] << ", " << pBest[1] << ") with Chi^2: " << BestChi2 << "." << std::endl;*/
-
-  //pBest[0] = 0.915875;
-  //pBest[1] = 0.052650;
-  //BareReco->SetParameters( pBest[0], pBest[1]);
-  
-  //auto start = std::chrono::high_resolution_clock::now();
-
-  //for( unsigned int l(0); l < 10; ++l)
-  //{
-  //ICARUS_Muons.Eval( BareReco, true );
-  //ICARUS_Protons.Eval( BareReco, true);
-  //ArgoNeuT_Protons_80.Eval( BareReco, true);
-  //ArgoNeuT_Protons_60.Eval( BareReco, true);
-  //ArgoNeuT_Protons_50.Eval( BareReco, true);
-  //ArgoNeuT_Protons_40.Eval( BareReco, true);
-    //}
-  
-  //auto stop = std::chrono::high_resolution_clock::now();
-  //auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-
-  //std::cout << "Time taken by function call: "
-  //    << duration.count()/10000000.0 << " seconds" << std::endl;
 
   return 0;
 }

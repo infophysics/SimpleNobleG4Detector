@@ -1,5 +1,5 @@
-#ifndef NuDataset_hh
-#define NuDataset_hh
+#ifndef DMDataset_hh
+#define DMDataset_hh
 
 // C++ includes.
 #include <vector>
@@ -7,19 +7,17 @@
 // Custom includes.
 #include "Dataset.hh"
 
-
-class NuDataset : public Dataset
+class DMDataset : public Dataset
 {
 public:
   using Dataset::Dataset;
   void Eval( const std::vector<double> &Parameters, std::vector<double> &Chi2s, const bool GenerateSummary=false );
-  void SetNBins( const unsigned int N ) { NBins = N; }
-  void SetBinL( const float L ) { BinL = L; }
+  void SetQorL( const bool QorL ) { IsQY = QorL; }
   std::vector<double> GetFields();
-  
+
 private:
-  unsigned int NBins;
-  float BinL;
+  bool IsQY;
 };
+
 
 #endif
