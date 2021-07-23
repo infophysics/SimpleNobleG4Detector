@@ -1,0 +1,147 @@
+Global:
+  SummarySuffix: 'Jul15'
+Datasets:
+  - Name: 'ICARUS_Muons'
+    Prefix: 'Global'
+    FigTitle: 'ICARUS 3-Ton Muons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_3Ton_muons_absolute.csv' ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/ICARUS_Muons_Summary_Global_Jul15.root'
+    Fields: [0.5, 0.35, 0.2]
+    Range: [0, 20]
+  - Name: 'ICARUS_Protons'
+    Prefix: 'Global'
+    FigTitle: 'ICARUS 3-Ton Protons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_3Ton_protons_absolute.csv' ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/ICARUS_Protons_Summary_Global_Jul15.root'
+    Fields: [0.5, 0.35, 0.2]
+    Range: [0, 40]
+  - Name: 'ArgoNeuT_Protons'
+    Prefix: 'Global'
+    FigTitle: 'ArgoNeuT Protons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_80.csv',
+            '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_60.csv',
+            '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_50.csv',
+            '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_40.csv' ]
+    DataLabels: [ "phi = 80", "phi = 60", "phi = 50", "phi = 40" ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/ArgoNeuT_Protons_Summary_Global_Jul15.root'
+    Fields: [0.481]
+    Range: [0, 40]
+  - Name: 'T600_Muons'
+    Prefix: 'Global'
+    FigTitle: 'ICARUS 3-Ton Muons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_T600_muons.csv' ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/T600_Muons_Summary_Global_Jul15.root'
+    Fields: [0.5]
+    Range: [0, 20]
+  - Name: 'ArgoNeuT_Deuterons'
+    Prefix: 'Global'
+    FigTitle: 'ArgoNeuT Deuterons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_deuterons.csv' ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/ArgoNeuT_Protons_Summary_Global_Jul15.root'
+    Fields: [0.481]
+    Range: [0, 40]
+  - Name: 'ICARUS_Muons'
+    Prefix: 'Best'
+    FigTitle: 'ICARUS 3-Ton Muons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_3Ton_muons_absolute.csv' ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/ICARUS_Muons_Summary_Best_Jul15.root'
+    Fields: [0.5, 0.35, 0.2]
+    Range: [0, 20]
+  - Name: 'ICARUS_Protons'
+    Prefix: 'Best'
+    FigTitle: 'ICARUS 3-Ton Protons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_3Ton_protons_absolute.csv' ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/ICARUS_Protons_Summary_Best_Jul15.root'
+    Fields: [0.5, 0.35, 0.2]
+    Range: [0, 40]
+  - Name: 'ArgoNeuT_Protons'
+    Prefix: 'Best'
+    FigTitle: 'ArgoNeuT Protons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_80.csv',
+            '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_60.csv',
+            '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_50.csv',
+            '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_protons_40.csv' ]
+    DataLabels: [ "phi = 80", "phi = 60", "phi = 50", "phi = 40" ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/ArgoNeuT_Protons_Summary_Best_Jul15.root'
+    Fields: [0.481]
+    Range: [0, 40]
+  - Name: 'T600_Muons'
+    Prefix: 'Best'
+    FigTitle: 'ICARUS 3-Ton Muons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ICARUS_T600_muons.csv' ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/T600_Muons_Summary_Best_Jul15.root'
+    Fields: [0.5]
+    Range: [0, 20]
+  - Name: 'ArgoNeuT_Deuterons'
+    Prefix: 'Best'
+    FigTitle: 'ArgoNeuT Deuterons'
+    Data: [ '/home/mueller/Dropbox/Projects/NobleG4Scripts/Fitting/data/ArgoNeuT_deuterons.csv' ]
+    Summary: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/ArgoNeuT_Deuterons_Summary_Best_Jul15.root'
+    Fields: [0.481]
+    Range: [0, 40]
+SingleContours:
+  - Name: 'ICARUS_3Ton_500'
+    FigTitle: 'ICARUS 3-Ton (500 V/cm Only)'
+    Data: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/'
+    Tag: ['ICARUS_3Ton_Muons_500;1', 'ICARUS_3Ton_Protons_500;1']
+    N: 50
+    Parameters: [0, 1, 2]
+    Range: [ [0.87, 0.923], [0.0405, 0.062] ]
+  - Name: 'Combined'
+    FigTitle: 'Combined'
+    Data: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/'
+    Tag: ['3Ton_Muons', '3Ton_Protons', 'T600_Muons', 'ArgoNeuT_Protons', 'ArgoNeuT_Deuterons']
+    N: 240
+    Parameters: [0, 1, 2]
+    Range: [ [0.87, 0.923], [0.0405, 0.062] ]
+  - Name: '3Ton_Muons'
+    FigTitle: 'ICARUS 3-Ton Muons'
+    Data: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/'
+    Tag: '3Ton_Muons'
+    N: 73
+    Parameters: [0, 1, 2]
+    Range: [ [0.80, 1.00], [0.03, 0.07] ]
+  - Name: '3Ton_Protons'
+    FigTitle: 'ICARUS 3-Ton Protons'
+    Data: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/'
+    Tag: '3Ton_Protons'
+    N: 73
+    Parameters: [0, 1, 2]
+    Range: [ [0.87, 0.923], [0.0405, 0.062] ]
+  - Name: 'T600_Muons'
+    FigTitle: 'ICARUS T600 Muons'
+    Data: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/'
+    Tag: 'T600_Muons'
+    N: 13
+    Parameters: [0, 1, 2]
+    Range: [ [0.87, 0.923], [0.0405, 0.062] ]
+  - Name: 'ArgoNeuT_Protons'
+    FigTitle: 'ArgoNeuT Protons'
+    Data: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/'
+    Tag: 'ArgoNeuT_Protons'
+    N: 75
+    Parameters: [0, 1, 2]
+    Range: [ [0.87, 0.923], [0.0405, 0.062] ]
+  - Name: 'ArgoNeuT_Deuterons'
+    FigTitle: 'ArgoNeuT Deuterons'
+    Data: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/'
+    Tag: 'ArgoNeuT_Deuterons'
+    N: 27
+    Parameters: [0, 1, 2]
+    Range: [ [0.87, 0.923], [0.0405, 0.062] ]
+  - Name: 'Scalettar_113Sn_ceK2_364keV'
+    FigTitle: 'Scalettar 1982'
+    Data: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/'
+    Tag: 'Scalettar_113Sn_ceK2_364keV'
+    N: 85
+    Parameters: [0, 1, 2]
+    Range: [ [0.87, 0.923], [0.0405, 0.062] ]
+  - Name: 'Aprile_207Bi_ceK3_976keV'
+    FigTitle: 'Aprile 1987'
+    Data: '/home/mueller/Projects/SimpleNobleG4Detector/Regression/build/'
+    Tag: 'Aprile_207Bi_ceK3_976keV'
+    N: 23
+    Parameters: [0, 1, 2]
+    Range: [ [0.87, 0.923], [0.0405, 0.062] ]
+
+    

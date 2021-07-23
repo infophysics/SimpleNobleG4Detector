@@ -17,6 +17,7 @@ class Dataset
 {
 public:
   Dataset( const std::string DatasetName, const std::string DataFileName );
+  Dataset();
   virtual void Eval( const std::vector<double> &Parameters, std::vector<double> &Chi2s, const bool GenerateSummary=false ) = 0;
   void SetN( const size_t N);
   void SetG4Input( G4Input* G4 ) { G4Data = G4; }

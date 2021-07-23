@@ -8,6 +8,7 @@
 class G4Input
 {
 public:
+  G4Input();
   G4Input( const std::string G4Name, const std::string G4File );
   const std::vector<int>& GetG4N() const { return G4N; }
   const std::vector<int>& GetG4B() const { return G4B; }

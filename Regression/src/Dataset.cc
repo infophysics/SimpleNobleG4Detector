@@ -47,6 +47,11 @@ Dataset::Dataset( const std::string DatasetName, const std::string DataFileName 
   else std::cerr << "Error opening input file: " << DataFileName << "." << std::endl;
 }
 
+Dataset::Dataset()
+{
+
+}
+
 void Dataset::SetN(const size_t N)
 {
   x.resize(N);

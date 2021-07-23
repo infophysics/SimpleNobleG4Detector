@@ -9,18 +9,19 @@
 
 // Custom includes.
 #include "NuDataset.hh"
-#include "EvalCUDA.hh"
+#include "EvalCUDA_Birks3D.hh"
 #include "G4Input.hh"
 
 void NuDataset::Eval( const std::vector<double> &Parameters, std::vector<double> &Chi2s, const bool GenerateSummary )
 {
-  const size_t PSize( Parameters.size() / 2 );
+  const size_t NPar(3);
+  const size_t PSize( Parameters.size() / NPar );
   const size_t NFields( UniqueFields.size() );
   
   std::vector< std::vector<double> > dEBins(NFields, std::vector<double>(PSize * NBins, 0 ) );
   std::vector< std::vector<double> > RBins(NFields, std::vector<double>(PSize * NBins, 0 ) );
 
-  ReCUDA::BirksWrapper( G4Data->GetG4dE(), G4Data->GetG4dx(),
+  ReCUDA_Birks3D::BirksWrapper( G4Data->GetG4dE(), G4Data->GetG4dx(),
 			G4Data->GetG4B(), UniqueFields,
 			Parameters, RBins, dEBins );
 
@@ -28,7 +29,6 @@ void NuDataset::Eval( const std::vector<double> &Parameters, std::vector<double>
   TGraph* Graph;
   TFile *Summary = nullptr;
   if( GenerateSummary ) Summary = TFile::Open(std::string(Name+"_Summary.root").c_str(), "recreate");
-  std::cout << "Lowest dE/dx: " << dEBins.at(0).back() << std::endl;
   for( size_t pid(0); pid < PSize; ++pid )
   {
     chi2 = 0;

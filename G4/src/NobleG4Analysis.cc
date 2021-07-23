@@ -3,7 +3,12 @@
 #include "G4RunManager.hh"
 #include "G4Step.hh"
 #include "g4root.hh"
-//#include "g4csv.hh"
+
+G4double Recombination(const G4double dE, const G4double dx, const G4double F)
+{
+  p[3] = { 1.0, 0.05, 1.0 };
+  return ( p[0] * dE ) / ( 1 + ( p[1] / pow(F, p[2]) ) * ( dE / dx ) );
+}
 
 void ConstructStepTuple()
 {

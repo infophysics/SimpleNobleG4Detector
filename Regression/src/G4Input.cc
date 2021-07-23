@@ -11,6 +11,11 @@
 // Custom includes.
 #include "G4Input.hh"
 
+G4Input::G4Input()
+{
+
+}
+
 G4Input::G4Input( const std::string G4Name, const std::string G4File )
 {
   // May be useful to have a unique name for the G4 input.

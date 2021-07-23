@@ -4,6 +4,8 @@
 #include "G4ThreeVector.hh"
 #include "g4root.hh"
 
+G4double Recombination(const G4double dE, const G4double dx, const G4double F);
+
 // Helper function for constructing the (step-level) analysis n-tuple.
 void ConstructStepTuple();
 
