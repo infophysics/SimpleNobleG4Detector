@@ -10,11 +10,11 @@ from array import array
 from ROOT import TGraph, TSpline3
 
 def main():
-    #File = '/home/mueller/Projects/SimpleNobleG4Detector/build/Muon_10keV_AllProcesses.root'
+    #File = '/home/ncarrara/physics/SimpleNobleG4Detector/build/Muon_10keV_AllProcesses.root'
     #LoadDF(File, 'AllProcesses')
-    File = '/home/mueller/Projects/SimpleNobleG4Detector/build/Muon_10keV_NoDecay.root'
+    File = '/home/ncarrara/physics/SimpleNobleG4Detector/build/Muon_10keV_NoDecay.root'
     LoadDF(File, 'NoDecay')
-    #File = '/home/mueller/Projects/SimpleNobleG4Detector/PythonScripts/SegmentedTracks_10keV.csv'
+    #File = '/home/ncarrara/physics/SimpleNobleG4Detector/PythonScripts/SegmentedTracks_10keV.csv'
     #LoadDF(File, 'Python', 24, True)
 
 def dQModel(dE, dx, F, P):

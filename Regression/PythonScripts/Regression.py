@@ -36,10 +36,10 @@ def BuildTGraph(File, F, P):
     #return GVec
 
 def main():
-    File = '/home/mueller/Projects/SimpleNobleG4Detector/build/Muon_10keV_NoDecay.root'
+    File = '/home/ncarrara/physics/SimpleNobleG4Detector/build/Muon_10keV_NoDecay.root'
     P = [0.87, (0.1225/1.36)*0.5]
     #TG_ICARUS_Muons_500Vcm = BuildTGraph(File, 0.5, P)
-    Data_ICARUS_Muons_500Vcm = pd.read_csv('/home/mueller/Downloads/500Vcm.csv')
+    Data_ICARUS_Muons_500Vcm = pd.read_csv('/home/ncarrara/physics/SimpleNobleG4Detector/Data/500Vcm.csv')
 
     dEdx, dQdx, GVec = BuildTGraph(File, 0.5, P)
 

@@ -188,7 +188,7 @@ def PlotEvent(Data, N, suf=''):
     else: Figure.savefig(f'EVD{N}_{suf}.png', dpi=600)
 
 def main():
-    File = '/home/mueller/Projects/SimpleNobleG4Detector/build/Muon_10keV_NoDecay.root'
+    File = '/home/ncarrara/physics/SimpleNobleG4Detector/build/Muon_10keV_NoDecay.root'
     LoadDF(File)
 
 if __name__ == '__main__':

@@ -1,0 +1,34 @@
+[INFO] Attempting to add input directory: ../../Data/ArgoNeuT_protons.csv.
+[ERROR] Specified input directory '../../Data/ArgoNeuT_protons.csv' not in path.
+[INFO] Attempting to add input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Added 77 data points from file ../../Data/ArgoNeuT_protons.csv.
+[INFO] Attempting to add input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Added 77 data points from file ../../Data/ArgoNeuT_protons.csv.
+[INFO] Attempting to add input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Attempting to add input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Added 77 data points from file ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding unique field values...
+[INFO] Added 1 unique field values.
+[INFO] Attempting to add input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Added 77 data points from file ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding unique field value(s)...
+[INFO] Added 1 unique field value(s).
+[INFO] Attempting to add input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Added 77 data points from file ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding unique field value(s)...
+[INFO] Added 1 unique field value(s).
+[INFO] Set number of bins for argoneut_protons: 100.
+[INFO] Set bin_length for argoneut_protons: 1.0.
+[INFO] Attempting to add input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding input file: ../../Data/ArgoNeuT_protons.csv.
+[INFO] Added 77 data points from file ../../Data/ArgoNeuT_protons.csv.
+[INFO] Adding unique field value(s)...
+[INFO] Added 1 unique field value(s).
+[INFO] Set number of bins for argoneut_protons: 100.
+[INFO] Set bin_length for argoneut_protons: 1.0.
